@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("../../public/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../../public/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  src: url("../../public/fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 500;
+  src: url("../../public/fonts/Lato/Lato-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 600;
+  src: url("../../public/fonts/Lato/Lato-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 700;
+  src: url("../../public/fonts/Lato/Lato-Bold.ttf");
+}
+
+* {
+  font-family: "Lato", "Roboto", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #1f2432;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 30px 80px 116px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-wrapper {
+  padding-top: 97px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: #90a2b5 no-repeat center;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.swiper-button-next:disabled,
+.swiper-button-prev:disabled {
+  cursor: default;
+}
+
+.swiper-button-prev {
+  background-image: url("../../public/arrow__left.svg");
+  right: 129px;
+}
+
+.swiper-button-next {
+  background-image: url("../../public/arrow__right.svg");
+  right: 0px;
+}
