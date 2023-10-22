@@ -1,0 +1,18 @@
+.Container {
+  width: 70px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    transition: opacity 0.2s;
+    cursor: pointer;
+  }
+  img:hover {
+    opacity: 0.8;
+  }
+  span {
+    text-align: center;
+    min-width: 20px;
+  }
+}

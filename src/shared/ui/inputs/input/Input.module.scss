@@ -1,0 +1,35 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.Label {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.InputContainer {
+  transition: opacity 0.2s;
+  opacity: 0.85;
+  border-radius: var(--radius-normal);
+  border: var(--border-normal);
+  display: flex;
+  align-items: center;
+  padding: 10px 14px 10px 0px;
+  span {
+    min-width: 70px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+.Input {
+  padding-left: 14px;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-normal);
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+}

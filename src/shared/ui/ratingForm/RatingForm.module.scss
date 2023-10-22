@@ -1,0 +1,24 @@
+.Rating {
+  transition: opacity 0.2s;
+  max-width: 140px;
+  padding: 7px 10px;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: var(--border-normal);
+  border-radius: var(--radius-normal);
+}
+.Rating__item {
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.Rating__item:hover,
+.Rating__item:hover ~ .Rating__item {
+  color: var(--gold);
+}
+.Rating__item:active {
+  color: var(--gold-hover);
+}
