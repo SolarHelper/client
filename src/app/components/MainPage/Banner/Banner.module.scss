@@ -1,16 +1,19 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
 .wrapper {
   width: 100%;
   height: 592px;
   display: flex;
   flex-direction: column;
-  background: #FEFEFE;
-  background-image: url('/banner-min.jpg');
+  background: $main-color;
+  background-image: url('/image/banner-min.jpg');
   background-size: cover;
 }
 
 .bannerContent {
   width: 50%;
-  color: #FEFEFE;
+  color: $main-color;
   padding-left: 57px;
   display: flex;
   flex-direction: column;
@@ -19,8 +22,7 @@
 }
 
 .title {
-  font-size: 32px;
-  font-weight: bold;
+  @include interBold(32px, $main-color);
   width: 443px;
   padding-top: 20px;
   margin-bottom: 40px;
@@ -29,19 +31,15 @@
 .bannerBtn {
  width: 140px;
  height: 40px;
- background: #FCB222;
+ @include interBold(12px);
+ background: $btn-color;
  border-radius: 15px;
- font-weight: bold;
  outline: none;
  border: none;
- font-family: 'Inter', sans-serif;
- font-size: 12px;
- color: #1B1F29;
 }
 
 .paragraph {
-  font-weight: bold;
-  font-size: 18px;
+  @include interBold(18px, $main-color);
   margin-bottom: 10px;
 
   &::before{

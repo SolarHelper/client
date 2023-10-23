@@ -14,8 +14,8 @@ const Specialists = ({infoSpecialist}:{
       <h1 className={classes.title}>Большой выбор специалистов</h1>
       <div className={classes.textWrapper}>
       {
-        infoSpecialist.map((item)=>(
-          <div className={classes.text}>
+        infoSpecialist.map((item, index)=>(
+          <div className={classes.text} key={index}>
             <div className={classes.divFirst}>
               <p className={classes.paragraphFirst}>{item.title}</p>
             </div>

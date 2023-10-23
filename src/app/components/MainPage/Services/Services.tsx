@@ -14,10 +14,16 @@ const Services = ({infoPanel}:{
       <h2 className={classes.serviceTitle}>Почему выгодно пользоваться сервисом Solar Helper?</h2>
       <div className={classes.serviceItems}>
       {
-        infoPanel.map(item =>(
-          <div className={classes.serviceItemWrapper}>
+        infoPanel.map((item, index) =>(
+          <div className={classes.serviceItemWrapper} key={index}>
             <div className={classes.serviceItem}>
-              <Image className={classes.image} width={60} height={60} src={item.image} alt="" />
+              <Image 
+                className={classes.image} 
+                width={60} 
+                height={60} 
+                sizes="(max-width: 768px) 40px" 
+                src={item.image} alt="" 
+              />
               <p className={classes.paragraphFirst}>{item.title.toUpperCase()}</p>
               <p className={classes.paragraphSecond}>{item.paragraph}</p>
             </div>

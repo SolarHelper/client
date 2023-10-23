@@ -1,7 +1,10 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
 .wrapper {
   width: 100%;
-  background: #1B1F29;
-  color: #FEFEFE;
+  background: $second-color;
+  color: $main-color;
   height: 260px;
   display: flex;
   flex-direction: column;
@@ -11,8 +14,7 @@
 
 .title {
   text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+  @include interBold(24px, $main-color);
 }
 
 .textWrapper {
@@ -27,13 +29,11 @@
 }
 
 .paragraphFirst {
-  font-weight: bold;
-  font-size: 32px;
+  @include interBold(32px, $main-color);
 }
 
 .paragraphSecond {
-  font-weight:400;
-  font-size: 18px;
+  @include interRegular(18px, $main-color);
 }
 
 @media (max-width: 914px) {
@@ -53,7 +53,7 @@
     height: 171px;
   }
   .title {
-    font-size: 14px;
+    @include interBold(14px, $main-color);
   }
   .textWrapper {
     flex-direction: column;
@@ -64,12 +64,11 @@
     display: flex;
   }
   .paragraphFirst {
-    font-size: 14px;
-    font-weight: bold;
+    @include interBold(14px, $main-color);
     width: 50px;
   }
   .paragraphSecond {
-    font-size: 12px;
+    @include interRegular(12px, $main-color);
     text-wrap:nowrap;
   }
 }

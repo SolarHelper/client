@@ -1,3 +1,6 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -50,8 +53,7 @@
 .paragraphSecond {
   text-align: center;
   margin-top: 10px;
-  font-size: 18px;
-  font-weight: 300;
+  @include interLight(18px);
   line-height: 20px;
 }
 
@@ -80,12 +82,12 @@
 
   .paragraphFirst {
     margin-top: 10px;
-    font-size: 14px;
+    @include interLight(14px);
   }
 
   .paragraphSecond {
     margin-top: 10px;
-    font-size: 14px;
+    @include interLight(14px);
   }
 
 }
@@ -93,17 +95,17 @@
 
   .serviceTitle {
     width: 320px;
-    font-size: 14px;
+    @include interBold(14px);
     margin: 0 0 20px 0;
   }
 
   .paragraphFirst {
     margin-top: 10px;
-    font-size: 12px;
+    @include interRegular(12px);
   }
-  
+
   .paragraphSecond {
     margin-top: 10px;
-    font-size: 12px;
+    @include interRegular(12px);
   }
 }

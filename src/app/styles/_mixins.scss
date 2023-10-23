@@ -1,0 +1,17 @@
+@mixin interBold($size, $color:#1B1F29) {
+  font-weight: bold;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin interRegular($size, $color:#1B1F29) {
+  font-weight: 400;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin interLight($size, $color:#1B1F29) {
+  font-weight: 300;
+  font-size: $size;
+  color: $color;
+}
