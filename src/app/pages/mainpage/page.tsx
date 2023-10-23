@@ -55,10 +55,12 @@ const MainPage = () => {
  
   return (
     <div className={classes.wrapper}>
+      <div className={classes.container}>
       <Banner/>
       <Services infoPanel={infoPanel}/>
       <Specialists infoSpecialist={infoSpecialist}/>
       <Services infoPanel={infoPanel}/>
+      </div>
     </div>
   );
 };
