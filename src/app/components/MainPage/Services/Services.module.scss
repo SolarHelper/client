@@ -1,33 +1,38 @@
-.wrapper{
+.wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px 0 70px 0;
 }
-.serviceTitle{
+
+.serviceTitle {
   width: 80%;
   text-align: center;
   font-size: 24px;
   margin: 0 0 50px 0;
 }
-.serviceItems{
+
+.serviceItems {
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.image{
+
+.image {
   margin-bottom: 20px;
 }
-.serviceItemWrapper{
+
+.serviceItemWrapper {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.serviceItem{
+
+.serviceItem {
   width: 50%;
   margin-bottom: 60px;
   display: flex;
@@ -35,57 +40,69 @@
   align-items: center;
   justify-content: center;
 }
-.paragraphFirst{
+
+.paragraphFirst {
   text-align: center;
   margin-top: 10px;
   font-size: 18px;
 }
-.paragraphSecond{
+
+.paragraphSecond {
   text-align: center;
   margin-top: 10px;
   font-size: 18px;
   font-weight: 300;
   line-height: 20px;
 }
+
 @media (max-width: 860px) {
-  .serviceItems{
+  .serviceItems {
     width: 50%;
   }
-  .serviceItemWrapper{
+
+  .serviceItemWrapper {
     width: 100%;
   }
-  .serviceTitle{
+
+  .serviceTitle {
     width: 500px;
     font-size: 24px;
     margin: 0 0 50px 0;
   }
+
 }
 @media (max-width: 544px) {
-  .serviceTitle{
+  .serviceTitle {
     width: 320px;
     font-size: 18px;
     margin: 0 0 20px 0;
   }
-  .paragraphFirst{
+
+  .paragraphFirst {
     margin-top: 10px;
     font-size: 14px;
   }
-  .paragraphSecond{
+
+  .paragraphSecond {
     margin-top: 10px;
     font-size: 14px;
   }
+
 }
 @media (max-width: 340px) {
-  .serviceTitle{
+
+  .serviceTitle {
     width: 320px;
     font-size: 14px;
     margin: 0 0 20px 0;
   }
-  .paragraphFirst{
+
+  .paragraphFirst {
     margin-top: 10px;
     font-size: 12px;
   }
-  .paragraphSecond{
+  
+  .paragraphSecond {
     margin-top: 10px;
     font-size: 12px;
   }

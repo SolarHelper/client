@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   width: 100%;
   background: #1B1F29;
   color: #FEFEFE;
@@ -8,60 +8,67 @@
   justify-content: space-evenly;
   box-sizing: border-box;
 }
-.title{
+
+.title {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
 }
-.textWrapper{
+
+.textWrapper {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
-.text{
+
+.text {
   width: 20%;
   text-align: center;
 }
-.paragraphFirst{
+
+.paragraphFirst {
   font-weight: bold;
   font-size: 32px;
 }
-.paragraphSecond{
+
+.paragraphSecond {
   font-weight:400;
   font-size: 18px;
 }
+
 @media (max-width: 914px) {
   .wrapper{
     width: 720px;
   }
 }
+
 @media (max-width: 720px) {
   .wrapper{
     width: 450px;
   }
 }
 @media (max-width: 450px) {
-  .wrapper{
+  .wrapper {
     width: 320px;
     height: 171px;
   }
-  .title{
+  .title {
     font-size: 14px;
   }
-  .textWrapper{
+  .textWrapper {
     flex-direction: column;
     width: 60%;
     margin: 0 auto;
   }
-  .text{
+  .text {
     display: flex;
   }
-  .paragraphFirst{
+  .paragraphFirst {
     font-size: 14px;
     font-weight: bold;
     width: 50px;
   }
-  .paragraphSecond{
+  .paragraphSecond {
     font-size: 12px;
     text-wrap:nowrap;
   }
