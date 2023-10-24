@@ -3,6 +3,8 @@ import classes from './Card.module.scss';
 import Link from 'next/link';
 import RatingStar from './RatingStar/RatingStar';
 import Image from 'next/image';
+import Button from './Button/Button';
+
 const Card = () => {
   return (
     <>
@@ -31,10 +33,7 @@ const Card = () => {
             </button>
           </div>
           {/* Кнопка покупки товара */}
-          <button className={classes.btn}>
-            В корзину
-            <Image className={classes.image} src='/svg/shopCartIcon.svg' alt='' width={15} height={16}/>
-          </button>
+          <Button/>
         </div>
       </div>
     </>

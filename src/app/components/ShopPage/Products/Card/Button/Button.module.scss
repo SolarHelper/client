@@ -1,0 +1,18 @@
+@import '../../../../../styles/mixins';
+@import '../../../../../styles/variables';
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: $main-color;
+  background: $btn-color;
+  border: none;
+  border-radius: 15px;
+  @include interBold(12px, $second-color);
+  padding: 20px;
+  .image {
+    margin-left: 20px;
+  }
+}
