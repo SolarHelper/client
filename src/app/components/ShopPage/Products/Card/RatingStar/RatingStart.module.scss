@@ -1,0 +1,22 @@
+@import '../../../../../styles/mixins';
+@import '../../../../../styles/variables';
+
+.ratingWrapper {
+  display: flex;
+  width: 140px;
+  border-radius: 8px;
+  border: 1px solid $second-color;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.ratingStars{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.star{
+  margin: 7px 5px;
+}

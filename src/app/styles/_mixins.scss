@@ -15,3 +15,8 @@
   font-size: $size;
   color: $color;
 }
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,51 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.wrapper {
+  width: 100%;
+  background: $main-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headerImage {
+  background: url('/image/solarpanel.jpg');
+  color: #fefefe;
+  width: 1140px;
+  height: 122px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  margin-bottom: 40px;
+  .title {
+    padding-left: 70px;
+  }
+}
+
+.categories {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+
+  .filterTitle {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+}
+
+.mainWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1140px;
+}
+
+.products {
+  width: 70%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,76 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+.item {
+  margin-top: 40px;
+  min-width: 32.87%;
+  width: 32.87%;
+  @include flexColumn;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @include interRegular(18px, $second-color);
+  border-radius: 15px;
+  border: solid 1px $second-color;
+  gap: 20px;
+}
+.cardLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardImage {
+  width: 140px;
+  height: 187px;
+  margin: 20px 0 0 0;
+}
+.cardBlock {
+  @include flexColumn;
+  width: 85%;
+  gap: 10px;
+}
+.itemName,
+.itemPriceCount {
+  width: 100%;
+}
+.itemPriceCount {
+  @include interBold(18px, $second-color);
+}
+
+.btnBlock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.counter {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .arrowLeft,
+  .arrowRight {
+    border:none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .count {
+    @include interRegular(14px, $second-color);
+  }
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: $main-color;
+  background: $btn-color;
+  border: none;
+  border-radius: 15px;
+  @include interBold(12px, $second-color);
+  padding: 20px;
+  .image {
+    margin-left: 20px;
+  }
+}
