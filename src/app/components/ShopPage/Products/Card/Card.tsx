@@ -2,8 +2,8 @@ import React from 'react';
 import classes from './Card.module.scss';
 import Link from 'next/link';
 import RatingStar from './RatingStar/RatingStar';
-import Image from 'next/image';
-import Button from './Button/Button';
+import Button from './BuyButton/Button';
+import ArrowButton from './ArrowButton/ArrowButton';
 
 const Card = () => {
   return (
@@ -22,18 +22,14 @@ const Card = () => {
           <RatingStar />
         </div>
         <div className={classes.btnBlock}>
-        {/* Счетчик товаров */}
+          {/* Блок Счетчика товаров */}
           <div className={classes.counter}>
-            <button className={classes.arrowLeft}>
-              <Image src='/svg/arrowLeft.svg' alt='' width={9} height={10}/>
-            </button>
+            <ArrowButton pathToImage={'/svg/ArrowLeft.svg'} />
             <span className={classes.count}>1</span>
-            <button className={classes.arrowRight}>
-              <Image src='/svg/arrowRight.svg' alt='' width={9} height={10}/>
-            </button>
+            <ArrowButton pathToImage={'/svg/ArrowRight.svg'} />
           </div>
           {/* Кнопка покупки товара */}
-          <Button/>
+          <Button />
         </div>
       </div>
     </>

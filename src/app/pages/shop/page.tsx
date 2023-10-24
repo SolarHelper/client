@@ -14,21 +14,38 @@ const Shop = () => {
       </div>
       <div className={classes.mainWrapper}>
         <div className={classes.categories}>
-          <h1 className={classes.title}>
-            Категории
-          </h1>
-          <FilterInput 
-            title={'Наши продукты'} 
-          />
+          <h1 className={classes.title}>Категории</h1>
+          {/* Чекбокс фильтрации Инверторы,Панели */}
+          <FilterInput title={'Наши продукты'} />
+          {/* Фильтрация по цене */}
+          <p className={classes.rangePrice}>Цена</p>
           <RangePrice />
-          <FilterInput 
-            title={'Номинальная мощность, Вт'} 
-          />
+          {/* Чекбокс фильтрации по номинальной мощности */}
+          <FilterInput title={'Номинальная мощность, Вт'} />
         </div>
 
         <div className={classes.products}>
+          {/* Поиск по товару */}
           <SearchInput />
           <div className={classes.cards}>
+            {/* Карточка товара */}
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
             <Card />
           </div>
         </div>
