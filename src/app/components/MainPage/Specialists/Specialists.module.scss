@@ -37,38 +37,47 @@
 }
 
 @media (max-width: 914px) {
-  .wrapper{
+  .wrapper {
     width: 720px;
   }
 }
 
 @media (max-width: 720px) {
-  .wrapper{
+  .wrapper {
     width: 450px;
   }
 }
+
 @media (max-width: 450px) {
+  
   .wrapper {
     width: 320px;
     height: 171px;
   }
+
   .title {
     @include interBold(14px, $main-color);
   }
+
   .textWrapper {
     flex-direction: column;
     width: 60%;
     margin: 0 auto;
   }
+
   .text {
     display: flex;
   }
+
   .paragraphFirst {
     @include interBold(14px, $main-color);
     width: 50px;
   }
+
   .paragraphSecond {
     @include interRegular(12px, $main-color);
-    text-wrap:nowrap;
+    text-wrap: nowrap;
   }
+
 }
+

@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .title {
@@ -29,21 +29,21 @@
 }
 
 .bannerBtn {
- width: 140px;
- height: 40px;
- @include interBold(12px);
- background: $btn-color;
- border-radius: 15px;
- outline: none;
- border: none;
+  width: 140px;
+  height: 40px;
+  @include interBold(12px);
+  background: $btn-color;
+  border-radius: 15px;
+  outline: none;
+  border: none;
 }
 
 .paragraph {
   @include interBold(18px, $main-color);
   margin-bottom: 10px;
 
-  &::before{
-    content: "→";
+  &::before {
+    content: '→';
     padding-right: 20px;
   }
 }

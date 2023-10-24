@@ -1,20 +1,13 @@
 import React from 'react';
 import classes from './Specialists.module.scss';
-interface specialistProps{
-  title: string;
-  paragraph: string;
-}
-const Specialists = ({infoSpecialist}:{
-  infoSpecialist: Array<specialistProps>;
-})  => {
-  
-  
+import { SpecialistProps } from './Specialist.types';
+const Specialists = ({ infoSpecialist }: { infoSpecialist: Array<SpecialistProps> }) => {
   return (
     <div className={classes.wrapper}>
       <h1 className={classes.title}>Большой выбор специалистов</h1>
+
       <div className={classes.textWrapper}>
-      {
-        infoSpecialist.map((item, index)=>(
+        {infoSpecialist.map((item, index) => (
           <div className={classes.text} key={index}>
             <div className={classes.divFirst}>
               <p className={classes.paragraphFirst}>{item.title}</p>
@@ -22,9 +15,8 @@ const Specialists = ({infoSpecialist}:{
             <div className={classes.divSecond}>
               <p className={classes.paragraphSecond}>{item.paragraph}</p>
             </div>
-        </div>
-        ))
-      }
+          </div>
+        ))}
       </div>
     </div>
   );

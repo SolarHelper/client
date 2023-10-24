@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Banner from '@/app/components/MainPage/Banner/Banner';
 import Specialists from '@/app/components/MainPage/Specialists/Specialists';
@@ -10,14 +10,13 @@ const serviceInfo = mock_api.getServiceInfo();
 const specialistList = mock_api.getSpecialist();
 
 const MainPage = () => {
-  
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-      <Banner/>
-      <Services infoPanel={serviceInfo}/>
-      <Specialists infoSpecialist={specialistList}/>
-      <Services infoPanel={serviceInfo}/>
+        <Banner />
+        <Services infoPanel={serviceInfo} />
+        <Specialists infoSpecialist={specialistList} />
+        <Services infoPanel={serviceInfo} />
       </div>
     </div>
   );
