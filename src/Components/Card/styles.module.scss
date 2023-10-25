@@ -1,0 +1,55 @@
+.card {
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid var(--base, #1b1f29);
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.avatar {
+  max-width: 218px;
+  border-radius: 15px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.link {
+  color: var(--base, #1b1f29);
+  /* InterBold18 */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+.params {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.paramsVert {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  & div {
+    justify-content: flex-start;
+  }
+}
+
+.icon {
+  width: 25px;
+  height: 30px;
+}
