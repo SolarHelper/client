@@ -1,0 +1,61 @@
+export const avialableCityes = [
+  { value: 1, label: "New York" },
+  { value: 2, label: "Los Angeles" },
+  { value: 3, label: "Chicago" },
+  { value: 4, label: "Houston" },
+  { value: 5, label: "Miami" },
+  { value: 6, label: "San Francisco" },
+  { value: 7, label: "Seattle" },
+  { value: 8, label: "Boston" },
+  { value: 9, label: "Dallas" },
+  { value: 10, label: "Atlanta" },
+];
+
+export const solarPanelTypes = [
+  { value: 1, label: "Монокристаллические" },
+  { value: 2, label: "Поликристаллические" },
+  { value: 3, label: "Аморфные (тонкие пленки)" },
+  { value: 4, label: "Опережающие" },
+  { value: 5, label: "Монокристаллические PERC" },
+  { value: 6, label: "Гибридные (PVT)" },
+  { value: 7, label: "Гибридные вакуумные трубки" },
+  { value: 8, label: "Тройное стекло" },
+  { value: 9, label: "Бифасические" },
+  { value: 10, label: "Концентрирующие" },
+];
+
+export const mockInstallers = [
+  {
+    id: 1,
+    image: "image1.jpg",
+    name: "Company 1",
+    city: "City 1",
+    isCheckedCompany: true,
+    reviews: 5,
+    inProcess: 3,
+    isFactoryServiced: true,
+    isHouseServiced: false,
+  },
+  {
+    id: 2,
+    image: "image2.jpg",
+    name: "Company 2",
+    city: "City 2",
+    isCheckedCompany: false,
+    reviews: 10,
+    inProcess: 2,
+    isFactoryServiced: false,
+    isHouseServiced: true,
+  },
+  {
+    id: 3,
+    image: "image3.jpg",
+    name: "Company 3",
+    city: "City 3",
+    isCheckedCompany: true,
+    reviews: 8,
+    inProcess: 0,
+    isFactoryServiced: true,
+    isHouseServiced: true,
+  },
+];

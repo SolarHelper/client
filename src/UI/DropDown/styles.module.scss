@@ -1,0 +1,23 @@
+.select {
+  display: flex;
+  gap: 20px;
+  color: var(--base, #1b1f29);
+  text-align: center;
+  /* InterRegular18 */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: small-caps;
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../../public/doubleArrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 4px;
+  padding-right: 32px;
+}
