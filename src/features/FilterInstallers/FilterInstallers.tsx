@@ -15,9 +15,11 @@ interface FilterInstallersProps {
 }
 
 const FilterInstallers = (initialValues: FilterInstallersProps) => {
-  const [cityValue, setCityValue] = useState(initialValues.city);
-  const [panelType, setPanelType] = useState(initialValues.panelTypes);
-  const [onlyCheckedCompany, setOnlyCheckedCompany] = useState(
+  const [cityValue, setCityValue] = useState<string | null>(initialValues.city);
+  const [panelType, setPanelType] = useState<string[] | null>(
+    initialValues.panelTypes
+  );
+  const [onlyCheckedCompany, setOnlyCheckedCompany] = useState<boolean>(
     initialValues.onlyCheckedCompany
   );
   const toggleCheckBox = () => setOnlyCheckedCompany(!onlyCheckedCompany);

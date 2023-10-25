@@ -3,11 +3,10 @@ import styles from "./styles.module.scss";
 
 interface CardParamProps {
   text: string;
-  icon: any;
+  icon: string;
 }
 
-const InstallerCardParam = (props: CardParamProps) => {
-  const { icon, text } = props;
+const InstallerCardParam = ({ icon, text }: CardParamProps) => {
   return (
     <div className={styles.param}>
       <Image src={icon} alt={icon} className={styles.icon} />
