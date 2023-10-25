@@ -1,3 +1,5 @@
+"use client";
+
 import Card from "@/Components/Card/Card";
 import { mockInstallers } from "@/assets/constants/installersHelpers";
 import { useEffect } from "react";
