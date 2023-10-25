@@ -40,30 +40,13 @@
   width: 100%;
 }
 
-.param {
+.paramsVert {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.services {
-  display: grid;
-  grid-template-areas: "house factory";
-  gap: 20px;
-  width: 100px;
-  & .icon {
-    width: 40px;
-    height: 40px;
+  flex-direction: column;
+  gap: 6px;
+  & div {
+    justify-content: flex-start;
   }
-}
-
-.house {
-  grid-area: house;
-}
-
-.factory {
-  grid-area: factory;
 }
 
 .icon {

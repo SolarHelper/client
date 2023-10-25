@@ -1,0 +1,18 @@
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.house {
+  grid-area: house;
+}
+
+.factory {
+  grid-area: factory;
+}
+
+.services {
+  display: grid;
+  grid-template-areas: "house factory";
+  gap: 20px;
+  width: 100px;
+}

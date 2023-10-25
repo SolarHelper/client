@@ -8,13 +8,13 @@ import {
 } from "@/assets/constants/installersHelpers";
 import DropDown from "@/UI/DropDown/DropDown";
 
-interface initValuesInterface {
+interface FilterInstallersProps {
   city: string | null;
-  panelTypes: [string] | null;
+  panelTypes: string[] | null;
   onlyCheckedCompany: boolean;
 }
 
-const FilterInstallers = (initialValues: initValuesInterface) => {
+const FilterInstallers = (initialValues: FilterInstallersProps) => {
   const [cityValue, setCityValue] = useState(initialValues.city);
   const [panelType, setPanelType] = useState(initialValues.panelTypes);
   const [onlyCheckedCompany, setOnlyCheckedCompany] = useState(

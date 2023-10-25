@@ -1,17 +1,17 @@
 import React from "react";
 import styles from "./styles.module.scss";
 
-type valuesType = {
+interface DropDownItem {
   value: number;
   label: string;
-};
+}
 
-interface DropDownInterface {
-  values: valuesType[];
+interface DropDownProps {
+  values: DropDownItem[];
   onChange: (e: any) => void;
 }
 
-const DropDown = (props: DropDownInterface) => {
+const DropDown = (props: DropDownProps) => {
   const { values, onChange } = props;
   return (
     <select onChange={onChange} className={styles.select}>
