@@ -1,0 +1,124 @@
+.order {
+    h2 {
+        margin-top: 60px;
+    }
+    .container {
+        width: 1110px;
+        margin: 0 auto;
+    }
+
+    &-wrapper {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-name {
+        width: 250px;
+        color: #1B1F29;
+        text-align: center;
+
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &-price {
+        &-string {
+            color: #000;
+            text-align: center;
+
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        &-number {
+            margin-top: 40px;
+            color: #000;
+            text-align: center;
+
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+    &-quantity {
+        &-string {
+            color: #000;
+            text-align: center;
+
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        &-number {
+            margin-top: 40px;
+            color: #000;
+            text-align: center;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        &-arrow {
+            margin: 0 29px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &-basket {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-info {
+        margin-top: 130px;
+        h2 {
+            margin-top: 0;
+        }
+        ul {
+            margin-top: 25px;
+            .order-wrapper {
+                display: flex;
+                justify-content: space-between;
+                list-style-type: none;
+                margin-bottom: 100px;
+            }
+        }
+    .allprice {
+        display: flex;
+        justify-content: space-between;
+    }
+    }
+}
+
+.item-name {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-variant: small-caps;
+}
+.item-model {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: small-caps;
+}
+
+.price {
+    color: #1B1F29;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: small-caps;
+}
