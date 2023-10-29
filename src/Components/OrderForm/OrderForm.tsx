@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useForm, SubmitHandler,Controller } from "react-hook-form"
-
+import { MuiTelInput, matchIsValidTel } from "mui-tel-input";
+import {CountryDropdown, RegionDropdown} from "react-country-region-selector";
 
 
 import Image from "next/image";
@@ -12,15 +13,15 @@ import Money from '../../assets/img/money.png'
 import styles from './orderForm.module.scss';
 
 
+
 type Inputs = {
     nameUser: string
     phone?: string
     email: string
-    newMail: string
-    city: string
+    country: string
+    region: string
     code: string
     text: string
-    tel: string
 }
 
 
@@ -38,8 +39,12 @@ const OrderForm: React.FC = () => {
         mode: 'onBlur',
 
     });
+    const [country, setCountry] = useState('');
+    const [region, setRegion] = useState('');
+
+
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        console.log(data);
+        console.log({...data, country, region});
         reset();
     }
     return (
@@ -65,14 +70,34 @@ const OrderForm: React.FC = () => {
                             </div>
 
                             <div className={styles['form__user-inputs-wrapper']}>
-                                <input {...register('phone', {required: 'Ввведите свой номер телефона'})}  className={styles['form__user-input']} type="text"  placeholder='Контактный телефон'/>
-                                <div className={styles.error}>
-                                    {errors?.phone && <p>{errors?.phone?.message || 'Error'}</p>}
-                                </div>
+
+                                <Controller
+                                    name="phone"
+                                    control={control}
+                                    rules={{required: true}}
+                                    render={({ field, fieldState }) => (
+                                        <MuiTelInput className={styles.muiTelInput}
+                                            {...field}
+                                            defaultCountry="RU"
+                                            onlyCountries={['RU', 'UA', 'BY']}
+                                            helperText={fieldState.invalid ? "Введите корректный номер" : ""}
+                                            error={fieldState.invalid}
+                                        />
+                                    )}
+                                />
+                                {/*<input {...register('phone', {required: 'Ввведите свой номер телефона'})}  className={styles['form__user-input']} type="text"  placeholder='Контактный телефон'/>*/}
+                                {/*<div className={styles.error}>*/}
+                                {/*    {errors?.phone && <p>{errors?.phone?.message || 'Error'}</p>}*/}
+                                {/*</div>*/}
                             </div>
 
                             <div className={styles['form__user-inputs-wrapper']}>
-                                <input {...register('email', {required: 'Ввведите свой e-mail'})} className={styles['form__user-input']} type="text"  placeholder='E-mail'/>
+                                <input {...register('email',
+                                    {required: 'Ввведите свой e-mail',
+                                        pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                        message: 'Неверный формат адреса',
+                                    },})} className={styles['form__user-input']} type="text"  placeholder='E-mail'/>
                                 <div className={styles.error}>
                                     {errors?.email && <p>{errors?.email?.message || 'Error'}</p>}
                                 </div>
@@ -92,24 +117,67 @@ const OrderForm: React.FC = () => {
 
 
                             <div className={styles['form__price-inputs-wrapper']}>
-                                <input {...register('newMail',
-                                    {required: 'Обязательное поле!'})} className={styles['form__price-input']} type="text"  placeholder='Доставка новой почтой'/>
+                                <Controller
+                                    name="country"
+                                    control={control}
+                                    rules={{required: 'Выберите страну'}}
+                                    render={({field}) => (
+                                        <CountryDropdown
+                                            {...field}
+                                            whitelist={["RU", "UA", "BY"]}
+                                            defaultOptionLabel="Выберите свою страну."
+                                            value={country}
+                                            onChange={(arg) => {
+                                                setCountry(arg);
+                                                field.onChange(arg);
+                                            }} />
+                                    )}
+                                />
                                 <div className={styles.error}>
-                                    {errors?.newMail && <p>{errors?.newMail?.message || 'Error'}</p>}
+                                    {errors?.country && <p>{errors?.country?.message || ''}</p>}
                                 </div>
+
+
+
+                                {/*<input {...register('country',*/}
+                                {/*    {required: 'Обязательное поле!'})} className={styles['form__price-input']} type="text"  placeholder='Доставка новой почтой'/>*/}
+                                {/*<div className={styles.error}>*/}
+                                {/*    {errors?.country && <p>{errors?.country?.message || 'Error'}</p>}*/}
+                                {/*</div>*/}
                             </div>
 
                             <div className={styles['form__price-inputs-wrapper']}>
-                                <input {...register('city',
-                                    {required: 'Выберите город!'})} className={styles['form__price-input']} type="text"  placeholder='Город'/>
+                                <Controller
+                                    name="region"
+                                    control={control}
+                                    rules={{required: 'Выберите область'}}
+                                    render={({field}) => (
+                                        <RegionDropdown
+                                            {...field}
+                                            blankOptionLabel="Вначале выберите страну."
+                                            defaultOptionLabel="Выберите область."
+                                            country={country}
+                                            value={region}
+                                            onChange={(selectedRegion) => {
+                                                setRegion(selectedRegion);
+                                                field.onChange(selectedRegion);
+                                            }} />
+                                    )}
+                                />
                                 <div className={styles.error}>
-                                    {errors?.city && <p>{errors?.city?.message || 'Error'}</p>}
+                                    {errors?.region && <p>{errors?.region?.message || ''}</p>}
                                 </div>
+
+                                {/*<input {...register('region',*/}
+                                {/*    {required: 'Выберите город!'})} className={styles['form__price-input']} type="text"  placeholder='Город'/>*/}
+                                {/*<div className={styles.error}>*/}
+                                {/*    {errors?.region && <p>{errors?.region?.message || 'Error'}</p>}*/}
+                                {/*</div>*/}
                             </div>
 
                             <div className={styles['form__price-inputs-wrapper']}>
                                 <input {...register('code',
-                                    {required: 'Выберите номер склада, куда будет доставка!'})} className={styles['form__price-input']} type="text"  placeholder='Номер склада'/>
+                                    {required: 'Укажите номер склада, куда будет доставка!'})} className={styles['form__price-input']} type="text"  placeholder='Номер склада'/>
                                 <div className={styles.error}>
                                     {errors?.code && <p>{errors?.code?.message || 'Error'}</p>}
                                 </div>
