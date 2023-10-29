@@ -1,0 +1,152 @@
+@import "_variables";
+@import "_colors";
+
+//радиус и толщина рамки
+@mixin border($border-radius: 15px, $border-width: 1px) {
+  border-radius: $border-radius;
+  border: $border-width solid $dark;
+}
+
+//изменение цвета фона (по умолчанию, наведение, нажатие)
+@mixin dynamic-background(
+  $default: $gold,
+  $hover: $gold-hover,
+  $active: $gold-active
+) {
+  background: $default;
+
+  &:hover {
+    background: $hover;
+  }
+
+  &:active {
+    background: $active;
+  }
+}
+
+//изменение прозрачности (по умолчанию, наведение, нажатие)
+@mixin dynamic-opacity($default: 1, $hover: 0.8, $active: 0.7) {
+  opacity: $default;
+
+  &:hover {
+    opacity: $hover;
+  }
+
+  &:active {
+    opacity: $active;
+  }
+}
+
+//изменение цвета рамок(по умолчанию, наведение, нажатие)
+@mixin dynamic-border($default: $dark, $hover: $gold, $active: $gold) {
+  border-color: $default;
+
+  &:hover {
+    border-color: $hover;
+  }
+
+  &:active {
+    border-color: $active;
+  }
+}
+
+// gap 0, display flex, flex-direction row
+@mixin row-flex($gap: 0, $display: flex, $direction: row) {
+  display: $display;
+  flex-direction: $direction;
+  column-gap: $gap;
+  @media (max-width: $tablet-width) {
+    column-gap: calc($gap * 0.5);
+  }
+}
+
+// gap 0, display flex, flex-direction column
+@mixin column-flex($gap: 0) {
+  flex-direction: column;
+  row-gap: $gap;
+  @media (max-width: $tablet-width) {
+    row-gap: calc($gap * 0.5);
+  }
+}
+
+//align-items и justify-content
+@mixin flex-position($align: center, $justify: space-between) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//цвет фона svg с hover и active (mixin применять к тегу, в который вложен тег svg)
+@mixin dynamic-color-svg($default: $dark, $hover: $gold, $active: $gold) {
+  svg {
+    path {
+      fill: $default;
+      &:hover {
+        fill: $hover;
+      }
+
+      &:active {
+        fill: $active;
+      }
+    }
+  }
+}
+
+//svg - ширина, высота decktop; ширина, высота при width< $tablet-width (файл _variables.scss) (mixin применять к тегу, в который вложен тег svg)
+@mixin dynamic-size-svg($width, $height, $media-width, $media-height) {
+  svg {
+    @media (max-width: $tablet-width) {
+      width: $media-width;
+      height: $media-height;
+    }
+  }
+}
+// изменение размера <Image> при width< $tablet-width
+@mixin dynamic-size-img($media-width, $media-height) {
+  @media (max-width: $tablet-width) {
+    width: $media-width;
+    height: $media-height;
+  }
+}
+
+//ширина, высота decktop; ширина, высота при width< $tablet-width (файл _variables.scss)
+@mixin size($width, $height, $media-width, $media-height) {
+  width: $width;
+  height: $height;
+  @media (max-width: $tablet-width) {
+    width: $media-width;
+    height: $media-height;
+  }
+}
+
+//падинги верхний, правый, левый, нижний
+@mixin dynamic-padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+  @media (max-width: $tablet-width) {
+    padding: calc($top * 0.5) calc($right * 0.5) calc($bottom * 0.5)
+      calc($left * 0.5);
+  }
+}
+
+@mixin dynamic-margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+  @media (max-width: $tablet-width) {
+    margin: calc($top * 0.5) calc($right * 0.5) calc($bottom * 0.5)
+      calc($left * 0.5);
+  }
+}
+
+// установки шрифта(размер шрифта desktop, при ширине < 678, line-height, font-weight)
+@mixin font-settings(
+  $font-size-max,
+  $font-size-min,
+  $line-height,
+  $font-weight
+) {
+  font-size: $font-size-max;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  @media (max-width: $tablet-width) {
+    font-size: $font-size-min;
+  }
+}
