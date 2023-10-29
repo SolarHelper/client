@@ -1,34 +1,40 @@
-"use client";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Navbar.module.scss";
-import sun from "../../../public/Icon/sun.svg";
-import cart from "../../../public/Icon/cart.svg";
-import user from "../../../public/Icon/user.svg";
-import basket from "../../../public/Icon/basket.svg";
-
-import Button from "@/shared/ui/buttons/Button";
+import CartSvg from "@/shared/ui/svg/CartSvg";
+import SunSvg from "@/shared/ui/svg/SunSvg";
+import UserSvg from "@/shared/ui/svg/UserSvg";
+import MenuBurgerSvg from "@/shared/ui/svg/MenuBurgerSvg";
 const Navbar = () => {
   return (
-    <nav className={styles.Container}>
-      <Link className={styles.Logo} href="/">
-        <Image src={sun} width={43} height={40} alt={"sun"} />
+    <nav className={styles.container}>
+      <Link className={`${styles.logo} title18`} href="/">
+        <SunSvg />
         SolarHelper
       </Link>
-      <div className={styles.Navbar}>
-        <div>
-          <Link href="/pages/hardware">Оборудование</Link>
-          <Link href="/pages/installers">Инсталляторы</Link>
-          <Link href="/pages/calculator">Калькулятор выработки</Link>
-        </div>
-        <div>
-          <Link href="/pages/cart">
-            <Image src={cart} width={40} height={34} alt={"cart"} />
+      <div className={styles.navbar}>
+        <div className={styles.pages}>
+          <Link href="/pages/hardware" className="subtitle12">
+            Оборудование
           </Link>
-          <Link href="/pages/user">
-            <Image src={user} alt={"user"} />
+          <Link href="/pages/installers" className="subtitle12">
+            Инсталляторы
+          </Link>
+          <Link href="/pages/calculator" className="subtitle12">
+            Калькулятор выработки
           </Link>
         </div>
+
+        <div className={styles.profile}>
+          <Link className={styles.cart} href="/pages/cart">
+            <CartSvg />
+          </Link>
+          <Link className={styles.user} href="/pages/user">
+            <UserSvg />
+          </Link>
+        </div>
+        <button>
+          <MenuBurgerSvg />
+        </button>
       </div>
     </nav>
   );

@@ -1,0 +1,41 @@
+@import "/src/app/styles/mixins.scss";
+@import "/src/app/styles/variables.scss";
+.container {
+  // gap 0, display flex, flex-direction column
+  @include column-flex(20px);
+
+  //align-items и justify-content
+  @include flex-position;
+
+  //ширина, высота decktop; ширина, высота при width< $mobile-width (файл _variables.scss)
+  // @include size(260px, 410px, 146px, 260px);
+
+  //радиус и толщина рамки
+  @include border(15px, 1px);
+
+  //падинги верхний, правый, левый, нижний
+  @include dynamic-padding(20px, 20px, 20px, 20px);
+}
+.img {
+  @include dynamic-size-img(60px, 80px);
+}
+.infoContainer {
+  // gap 0, display flex, flex-direction column
+  @include column-flex(10px);
+
+  //align-items и justify-content
+  @include flex-position;
+  div {
+    text-align: center;
+  }
+}
+.btnContainer {
+  // gap 0, display flex, flex-direction column
+  @include row-flex(20px);
+
+  //align-items и justify-content
+  @include flex-position(center, center);
+  @media (max-width: $mobile-width) {
+    @include column-flex(20px);
+  }
+}

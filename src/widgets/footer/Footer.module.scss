@@ -1,0 +1,31 @@
+@import "../../app/styles/colors";
+@import "../../app/styles/mixins";
+@import "../../app/styles/variables";
+
+.wrapper {
+  width: 100vw;
+  background-color: $dark;
+  //падинги верхний, правый, левый, нижний
+}
+
+.container {
+  //падинги верхний, правый, левый, нижний
+  @include dynamic-padding(20px, 20px, 20px, 20px);
+  @include row-flex(50px);
+  @include flex-position(center, center);
+
+  min-height: 120px;
+  color: $light;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  flex-wrap: wrap;
+  span,
+  a {
+    @include row-flex(10px);
+    @include flex-position(center, center);
+  }
+  // @media (max-width: $mobile-width) {
+  //   @include flex-position(center, space-between);
+  // }
+}

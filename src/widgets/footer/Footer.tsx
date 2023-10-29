@@ -1,12 +1,29 @@
-import Input from "@/shared/ui/inputs/input/Input";
-import user from "../../../public/Icon/user.svg";
-import Button from "@/shared/ui/buttons/Button";
-import Image from "next/image";
-import RatingForm from "@/shared/ui/ratingForm/RatingForm";
-import Counter from "@/shared/ui/counter/Counter";
-import ToggleLoginAndReg from "@/shared/ui/toggleLoginAndReg/ToggleLoginAndReg";
+import MessageSvg from "@/shared/ui/svg/MessageSvg";
+import PhoneSvg from "@/shared/ui/svg/PhoneSvg";
+import style from "@/widgets/Footer/Footer.module.scss";
+import Link from "next/link";
+
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div className={style.wrapper}>
+      <div className={style.container}>
+        <span className="subtitle12">
+          <PhoneSvg />
+          +38 (000) 123-12-12
+        </span>
+        <Link href="/#" className="subtitle12">
+          <MessageSvg />
+          support@solar.ua
+        </Link>
+        <Link href="/pages/political" className="subtitle12">
+          <abbr title="political">Политика конфиденциальности</abbr>
+        </Link>
+        <Link href="/pages/forInstallers" className="subtitle12">
+          <abbr title="forInstallers">Компаниям-инсталяторам</abbr>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export { Footer };
