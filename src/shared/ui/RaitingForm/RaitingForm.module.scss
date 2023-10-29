@@ -1,0 +1,26 @@
+@import "../../../app/styles/colors.scss";
+@import "../../../app/styles/mixins.scss";
+.raiting {
+  padding: 0 10px;
+
+  //ширина и высота decktop, ширина и высота при width<678px
+  @include size(140px, 30px, 100px, 20px);
+
+  // gap 0, display flex, flex-direction row
+  @include row-flex(10px, inline-flex, row-reverse);
+
+  //align-items и justify-content
+  @include flex-position(center, center);
+
+  //радиус и толщина рамки(15 и 1px по умолчачнию)
+  @include border(8px, 1px);
+
+  //svg - ширина, высота decktop; ширина, высота при width< $mobile-width (файл _variables.scss) (mixin применять к тегу, в который вложен тег svg)
+  @include dynamic-size-svg(16px, 16px, 12px, 12px);
+
+  //цвет фона svg с hover и active (mixin применять к тегу, в который вложен тег svg)
+  @include dynamic-color-svg;
+  svg {
+    cursor: pointer;
+  }
+}

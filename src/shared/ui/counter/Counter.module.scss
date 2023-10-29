@@ -1,18 +1,26 @@
-.Container {
+@import "../../../app/styles/mixins.scss";
+@import "../../../app/styles/colors.scss";
+.container {
   width: 70px;
   height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  img {
-    transition: opacity 0.2s;
+  // gap 0, display flex, flex-direction row
+  @include row-flex;
+
+  //align-items и justify-content
+  @include flex-position;
+
+  //цвет svg с hover и active
+  @include dynamic-color-svg();
+
+  .input {
+    text-align: center;
+    max-width: 20px;
+  }
+  svg {
     cursor: pointer;
   }
-  img:hover {
-    opacity: 0.8;
-  }
-  span {
-    text-align: center;
-    min-width: 20px;
-  }
+}
+.btn {
+  border: none;
+  background-color: transparent;
 }

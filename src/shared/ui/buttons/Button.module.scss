@@ -1,0 +1,23 @@
+@import "../../../app/styles/_mixins.scss";
+
+.btn {
+  //ширина и высота decktop, ширина и высота при width<678px
+  @include size(140px, 40px, 120px, 34px);
+
+  //радиус и толщина рамки
+  @include border(15px, 0);
+
+  //цвет фона с hover и active
+  @include dynamic-background;
+
+  // gap 0, display flex, flex-direction row
+  @include row-flex(14px);
+
+  //align-items и justify-content
+  @include flex-position(center, center);
+
+  // 12px шрифт,при ширине 678px - 10px,line-height 1,bold
+  @include font-settings(12px, 10px, 1, 800);
+  padding: 10px 20px;
+  cursor: pointer;
+}
