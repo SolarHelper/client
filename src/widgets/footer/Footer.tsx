@@ -16,7 +16,7 @@ const Footer = () => {
           support@solar.ua
         </Link>
         <Link href="/pages/political" className="subtitle12">
-          <abbr title="political">Политика конфиденциальности</abbr>
+          <abbr title="political">Политика конфиденциальности </abbr>
         </Link>
         <Link href="/pages/forInstallers" className="subtitle12">
           <abbr title="forInstallers">Компаниям-инсталяторам</abbr>

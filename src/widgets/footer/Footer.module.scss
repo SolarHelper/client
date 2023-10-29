@@ -11,6 +11,7 @@
 .container {
   //падинги верхний, правый, левый, нижний
   @include dynamic-padding(20px, 20px, 20px, 20px);
+
   @include row-flex(50px);
   @include flex-position(center, center);
 

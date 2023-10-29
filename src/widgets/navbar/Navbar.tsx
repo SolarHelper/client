@@ -7,7 +7,7 @@ import MenuBurgerSvg from "@/shared/ui/svg/MenuBurgerSvg";
 const Navbar = () => {
   return (
     <nav className={styles.container}>
-      <Link className={`${styles.logo} title18`} href="/">
+      <Link className={`${styles.logo}  title18`} href="/">
         <SunSvg />
         SolarHelper
       </Link>

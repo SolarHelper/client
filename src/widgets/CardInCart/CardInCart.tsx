@@ -26,7 +26,7 @@ const CardInCart = ({
       ></Image>
       <div className={style.wrapper}>
         <div className={style.infoContainer}>
-          <span className="title18">{productPrice}р</span>
+          <span className="title18">{productPrice}р </span>
           <span className="subtitle18">{productName}</span>
           <Counter NumberOfProducts={NumberOfProducts} />
         </div>

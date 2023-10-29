@@ -28,7 +28,7 @@ const CardProduct = ({
       ></Image>
       <div className={style.infoContainer}>
         <div className="subtitle18">{productName}</div>
-        <div className="title18">{productPrice}p</div>
+        <div className="title18">{productPrice}p </div>
         <RaitingForm productRaiting={productRaiting}></RaitingForm>
       </div>
       <div className={style.btnContainer}>

@@ -17,6 +17,7 @@
 
   .img {
     // изменение размера <Image> при width< $mobile-width
+
     @include dynamic-size-img(60px, 80px);
   }
 }
