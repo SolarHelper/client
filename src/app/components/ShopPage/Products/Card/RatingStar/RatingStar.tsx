@@ -6,9 +6,11 @@ const RatingStar = () => {
   return (
     <div className={classes.ratingWrapper}>
       <div className={classes.ratingStars}>
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={18} height={17} />
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={18} height={17} />
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={18} height={17} />
+        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
+        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
+        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
+        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
+        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
       </div>
     </div>
   );

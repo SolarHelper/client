@@ -1,6 +1,7 @@
 @import '../../../../styles/mixins';
 @import '../../../../styles/variables';
 .searchWrapper {
+  position: relative;
   width: 100%;
   border: 1px solid $second-color;
   border-radius: 15px;
@@ -22,6 +23,14 @@
 }
 @media (max-width: 768px) {
   .searchWrapper {
-    width: 100%;
+    width: 90%;
+  }
+  .searchInput{
+    height: 30px;
+    display: flex;
+  }
+  .searchImage {
+    top: 7px;
+    right: 40px;
   }
 }
