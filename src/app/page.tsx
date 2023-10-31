@@ -2,7 +2,6 @@
 
 import { useGetProductByNameQuery } from '@/store/slice/api';
 import { UserData } from '@/app/types';
-import OrderForm from "@/Components/OrderForm/OrderForm";
 
 export default function Home() {
   const { data } = useGetProductByNameQuery('');
@@ -11,7 +10,6 @@ export default function Home() {
   }
   return (
     <main>
-    <OrderForm/>
       <div className="bg-gray-900 min-h-screen p-6">
         <div className="max-w-3xl mx-auto bg-gray-900  rounded-lg shadow-md p-6">
           <h1 className="text-neutral-300 font-bold text-4xl flex justify-center">RtK Query</h1>
