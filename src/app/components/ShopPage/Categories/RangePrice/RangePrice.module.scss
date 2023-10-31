@@ -1,6 +1,20 @@
-.rangePrice{
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+.rangePrice {
   display: flex;
+  gap: 20px 0;
   flex-direction: column;
-  .rangeInput{
+  .rangePriceParagraph {
+    @include interBold(18px, $second-color);
+  }
+  .rangeSpan {
+    @include interRegular(14px, $second-color)
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: $btn-color;
+    cursor: pointer;
+    height: 5px;
   }
 }

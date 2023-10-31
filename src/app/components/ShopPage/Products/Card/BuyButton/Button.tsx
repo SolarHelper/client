@@ -1,11 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './Button.module.scss';
-const Button = () => {
+const Button = ({children,width, height, image}) => {
+  
   return (
     <button className={classes.btn}>
-      В корзину
-      <Image className={classes.image} src='/svg/shopCartIcon.svg' alt='' width={15} height={16}/>
+      {children}
+      <Image 
+        className={classes.image} 
+        src={image} 
+        width={width} 
+        height={height}
+        alt=''
+      />
     </button>
   );
 };

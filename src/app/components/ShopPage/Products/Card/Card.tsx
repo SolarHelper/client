@@ -29,7 +29,7 @@ const Card = () => {
             <ArrowButton pathToImage={'/svg/ArrowRight.svg'} />
           </div>
           {/* Кнопка покупки товара */}
-          <Button />
+          <Button width={15} height={16} image='/svg/shopCartIcon.svg'>Купить</Button>
         </div>
       </div>
     </>

@@ -3,7 +3,8 @@
 
 .ratingWrapper {
   display: flex;
-  width: 140px;
+  width: 70%;
+  min-width: 100px;
   border-radius: 8px;
   border: 1px solid $second-color;
   margin: 0 auto;

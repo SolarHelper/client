@@ -4,7 +4,9 @@ const FilterInput = ({ title }) => {
   return (
     // Фильтрация товаров по наименованию (Солнечные панели, Инверторы)
     <div className={classes.inputWrapper}>
-      <p className={classes.filterTitle}>{title}</p>
+      <p className={classes.filterTitle}>
+        {title}
+      </p>
       <div className={classes.solarPanelInput}>
         <input
           className={classes.solarInput}
@@ -15,7 +17,7 @@ const FilterInput = ({ title }) => {
         />
         <label for="panel">Солнечные панели</label>
       </div>
-      <div className={classes.inverterInput}>
+      <div className={classes.SolarInverterInput}>
         <input
           className={classes.inverterInput}
           type="checkbox"

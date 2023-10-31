@@ -10,7 +10,7 @@
 }
 .headerImage {
   background: url('/image/solarpanel.jpg');
-  color: #fefefe;
+  color: $main-color;
   width: 1140px;
   height: 122px;
   display: flex;
@@ -21,26 +21,19 @@
     padding-left: 70px;
   }
 }
-
-.categories {
-  width: 26%;
-  display: flex;
-  flex-direction: column;
-
-  .filterTitle {
-    font-size: 30px;
-    margin-bottom: 24px;
-  }
-}
-
 .mainWrapper {
   display: flex;
   justify-content: space-between;
   width: 1140px;
 }
+.buttonBlock{
+  display: none;
+}
 
 .products {
   width: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 .cards {
@@ -49,4 +42,51 @@
   width: 100%;
   flex-wrap: wrap;
   gap: 6px 0;
+  flex-wrap: wrap;
+}
+@media (max-width: 1140px) {
+  .mainWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 927px) {
+  .mainWrapper{
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+    justify-content: space-between;
+  }
+  .products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    min-width: 70%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .close{
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .products {
+    width: 100%;
+  }
+  .buttonBlock{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
 }
