@@ -32,7 +32,7 @@
   }
   &__home {
     display: flex;
-    justify-content: center; 
+    margin-left: 294px;
     margin-top: 152px;
     a {
       text-decoration: none;
@@ -40,7 +40,7 @@
       align-items: center;
     }
     &__text {
-      margin-left: 66px;
+      margin-left: 74px;
       color: #31af91;
       font-size: 60px;
       font-style: normal;
@@ -50,7 +50,7 @@
 
   &__equipment {
     display: flex;
-    justify-content: center; 
+    margin-left: 282px;
     margin-top: 102px;
     a {
       text-decoration: none;
@@ -66,3 +66,4 @@
     }
   }
 }
+

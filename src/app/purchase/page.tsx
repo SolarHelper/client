@@ -23,14 +23,14 @@ export default function ThankYouForPurchase() {
   
             <div className={styles.thanks__home}>
                 <Link href='/'>
-                    <Image src={HomeSVG} alt="home" />
+                    <Image src={HomeSVG} width={70} height={74} alt="home" />
                     <span className={styles.thanks__home__text}>На главную</span>
                 </Link>
             </div>
             <div className={styles.thanks__equipment}>
                 <Link href='#'>
-                    <Image src={Solar} alt="solar" />
-                    <span className={styles.thanks__home__text}>Оборудование</span>
+                    <Image src={Solar} width={94} height={94} alt="solar" />
+                    <span className={styles.thanks__equipment__text}>Оборудование</span>
                 </Link>
             </div>
 
