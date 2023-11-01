@@ -130,7 +130,7 @@ const OrderForm: React.FC = () => {
 
                 <div className={styles.form__wrapper}>
                     <input {...register('code',
-                        {required: 'Укажите номер склада, куда будет доставка!'})} className={styles.form__wrapper__input} type="text"  placeholder='Номер склада'/>
+                        {required: 'Укажите номер склада'})} className={styles.form__wrapper__input} type="text"  placeholder='Номер склада'/>
                     <div className={styles.error}>
                         {errors?.code && <p>{errors?.code?.message || 'Error'}</p>}
                     </div>
