@@ -1,11 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import classes from './page.module.scss';
 import SearchInput from '@/app/components/ShopPage/Products/SearchInput/SearchInput';
 import Card from '@/app/components/ShopPage/Products/Card/Card';
 import Button from '@/app/components/ShopPage/Products/Card/BuyButton/Button';
 import Categories from '@/app/components/ShopPage/Categories/Categories';
-
+import data from '../../../../public/data/data.json';
+import { Item } from '@/app/components/ShopPage/Products/Card/types';
 const Shop = () => {
   const [visible, setVisible] = useState(false);
   const buttonHandler = () =>{
@@ -41,13 +42,10 @@ const Shop = () => {
           <div className={classes.cards}>
             {/* Карточка товара */}
             
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+           { data.map((item:Item, index:number)=>(
+            <Card key={index} item={item}/>
+          ))
+          }
           </div>
         </div>
       </div>

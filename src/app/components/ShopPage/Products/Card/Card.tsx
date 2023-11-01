@@ -4,8 +4,9 @@ import Link from 'next/link';
 import RatingStar from './RatingStar/RatingStar';
 import Button from './BuyButton/Button';
 import ArrowButton from './ArrowButton/ArrowButton';
-
-const Card = () => {
+import { PropsCard } from './types';
+const Card: React.FC<PropsCard> = ({item}, key) => {
+  
   return (
     <>
       {/* Карточка товара */}
@@ -13,12 +14,13 @@ const Card = () => {
         {/* Линк, переход в карточку товара */}
         <Link className={classes.cardLink} href="">
           {/* Изображение товара */}
-          <img className={classes.cardImage} src="/image/panel.jpg" />
+            
+          <img className={classes.cardImage} src={item.photo} />
         </Link>
         {/* Блок: Название товара, Цена, Рейтинг */}
         <div className={classes.cardBlock}>
-          <p className={classes.itemName}>Risen RSM40-8-410M</p>
-          <p className={classes.itemPriceCount}>5700 грн</p>
+          <p className={classes.itemName}>{item.model}</p>
+          <p className={classes.itemPriceCount}>{item.price} грн</p>
           <RatingStar />
         </div>
         <div className={classes.btnBlock}>
