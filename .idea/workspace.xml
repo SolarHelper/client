@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09eeabf9-75a3-4dd1-b23f-2e08cdacc5bf" name="Changes" comment="" />
+    <list default="true" id="09eeabf9-75a3-4dd1-b23f-2e08cdacc5bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/yellow_check.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/purchase/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/purchase/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/purchase/purchase.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/purchase/purchase.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/HomeSVG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/Solar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/green_check.svg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +48,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\AAAAAA\\startap\\client\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -57,6 +65,7 @@
       <workItem from="1698740333133" duration="9301000" />
       <workItem from="1698756816357" duration="1790000" />
       <workItem from="1698815692655" duration="91000" />
+      <workItem from="1698895503482" duration="4483000" />
     </task>
     <servers />
   </component>

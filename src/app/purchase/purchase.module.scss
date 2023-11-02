@@ -1,7 +1,7 @@
 .thanks {
-  padding: 25px 0;
+  padding: 70px 0 228px 0;
   .container {
-    width: 1116px;
+    width: 1140px;
     margin: 0 auto;
   }
   &__img {
@@ -13,64 +13,72 @@
     width: 195px;
     height: 195px;
     border-radius: 50%;
-    background-color: #31af91;
+    border: 4px solid #FCB222;
   }
   &__title {
+    margin-top: 20px;
     color: #1b1f29;
-    font-family: Montserrat;
-    font-size: 60px;
+    font-size: 64px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__subtitle {
+    margin-top: 60px;
+    color: #1B1F29;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  &__titleOrder {
+    margin-top: 20px;
+    color: #1B1F29;
+    font-size: 32px;
     text-align: center;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
-  .firstTitle {
-    margin-top: 83px;
+  &__link {
+    text-decoration: none;
   }
-  .secondTitle {
-    margin-top: 139px;
-  }
-  &__home {
+  &__btn {
+    margin: 0 auto;
+    margin-top: 60px;
     display: flex;
-    margin-left: 294px;
-    margin-top: 152px;
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-    &__text {
-      margin-left: 74px;
-      color: #31af91;
-      font-size: 60px;
-      font-style: normal;
-      font-weight: 700;
+    width: 200px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: #FCB222;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+      background:  #FCB222;
     }
   }
-
-  &__equipment {
-    display: flex;
-    margin-left: 282px;
-    margin-top: 102px;
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-    &__text {
-      margin-left: 66px;
-      color: #31af91;
-      font-size: 60px;
-      font-style: normal;
-      font-weight: 700;
-    }
+  &__notification {
+    color: rgba(27, 31, 41, 0.31);
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 1200px) {
   .thanks {
     .container {
-      width: 1116px;
+      width: 960px;
     }
   }
 }
@@ -78,39 +86,19 @@
 @media (max-width: 992px) {
   .thanks {
     .container {
-      width: 960px;
+      width: 720px;
     }
-    &__home {
-      display: flex;
-      justify-content: center;
-      margin-left: 0px;
-    }
-    &__equipment {
-      display: flex;
-      justify-content: center;
-      margin-left: 0px;
-      }
-}
+  }
 }
 
 @media (max-width: 768px) {
   .thanks {
     .container {
-      width: 720px;
+      width: 540px;
       padding: 0 10px;
     }
     &__title {
       font-size: 50px;
-    }
-    &__home {
-      &__text {
-        font-size: 50px;
-      }
-    }
-    &__equipment {
-      &__text {
-        font-size: 50px;
-      }
     }
   }
 }
@@ -118,73 +106,16 @@
 @media (max-width: 576px) {
   .thanks {
     .container {
-      width: 540px;
+      width: 320px;
     }
     &__title {
       font-size: 38px;
     }
-    &__home {
-      &__text {
-        font-size: 38px;
-      }
-      a{
-        img {
-          width: 45px;
-          height: 45px;
-        }
-      }
-    }
-    &__equipment {
-      &__text {
-        font-size: 38px;
-      }
-      a{
-        img {
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 375px) {
-  .thanks {
-    .container {
-      width: 320px;
-    }
-    &__title {
+    &__subtitle {
       font-size: 20px;
     }
-    .secondTitle {
-      margin-top: 83px;
-    }
-    &__home {
-      margin-top: 83px;
-      &__text {
-        font-size: 23px;
-        margin-left: 33px;
-      }
-      a{
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-    &__equipment {
-      margin-top: 83px;
-      margin-left: 30px;
-      &__text {
-        font-size: 23px;
-        margin-left: 33px;
-      }
-      a{
-        img {
-          width: 40px;
-          height: 40px;
-        }
-      }
+    &__titleOrder {
+      font-size: 20px;
     }
   }
 }

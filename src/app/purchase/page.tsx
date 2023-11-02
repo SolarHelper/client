@@ -1,10 +1,7 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import GreenLogo from '../../assets/img/green_check.svg';
-import HomeSVG from '../../assets/img/HomeSVG.svg';
-import Solar from '../../assets/img/Solar.svg';
+import YellowLogo from '../../assets/img/yellow_check.svg';
 
 import styles from './purchase.module.scss';
 
@@ -12,30 +9,14 @@ export default function ThankYouForPurchase() {
   return (
     <section className={styles.thanks}>
       <div className={styles.container}>
-        <h2>Шапка навигации</h2>
-        <h2>Компонент с картинкой+текст</h2>
         <div className={styles.thanks__img}>
-          <Image src={GreenLogo} width={139} height={102} alt="greenlogo" />
+          <Image src={YellowLogo} width={90} height={57} alt="logo" />
         </div>
-        <h2 className={`${styles.firstTitle} ${styles.thanks__title}`}>Спасибо за ваш заказ</h2>
-        <h2 className={`${styles.secondTitle} ${styles.thanks__title}`}>Мы скоро свяжемся с вами</h2>
-
-  
-            <div className={styles.thanks__home}>
-                <Link href='/'>
-                    <Image src={HomeSVG} width={70} height={74} alt="home" />
-                    <span className={styles.thanks__home__text}>На главную</span>
-                </Link>
-            </div>
-            <div className={styles.thanks__equipment}>
-                <Link href='#'>
-                    <Image src={Solar} width={94} height={94} alt="solar" />
-                    <span className={styles.thanks__equipment__text}>Оборудование</span>
-                </Link>
-            </div>
-
-        
-
+        <h2 className={styles.thanks__title}>Спасибо!</h2>
+          <h3 className={styles.thanks__subtitle}>Вы успешно оформили заказ. Мы свяжемся с вами в ближайшее время.</h3>
+          <h3 className={styles.thanks__titleOrder}>Номер вашего заказа №3471</h3>
+          <Link className={styles.thanks__link} href='#'><button className={styles.thanks__btn}>Вернуться в магазин</button></Link>
+          <h3 className={styles.thanks__notification}>На вашу почту отправленно уведомление об оплате!</h3>
       </div>
     </section>
   );
