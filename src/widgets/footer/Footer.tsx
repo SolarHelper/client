@@ -1,5 +1,5 @@
-import MessageSvg from "@/shared/ui/svg/MessageSvg";
-import PhoneSvg from "@/shared/ui/svg/PhoneSvg";
+import Message from "/public/icon/message.svg";
+import Phone from "/public/icon/phone.svg";
 import style from "@/widgets/Footer/Footer.module.scss";
 import Link from "next/link";
 
@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.container}>
-        <span className="subtitle12">
-          <PhoneSvg />
+        <Link href="/phone" className="subtitle12">
+          <Phone />
           +38 (000) 123-12-12
-        </span>
-        <Link href="/#" className="subtitle12">
-          <MessageSvg />
+        </Link>
+        <Link href="/message" className="subtitle12">
+          <Message />
           support@solar.ua
         </Link>
         <Link href="/pages/political" className="subtitle12">

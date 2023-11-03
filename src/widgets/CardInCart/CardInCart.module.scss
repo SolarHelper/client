@@ -1,48 +1,42 @@
 @import "../../app/styles/mixins.scss";
 .container {
-  //радиус и толщина рамки
   @include border;
 
-  // gap 0, display flex, flex-direction row
   @include row-flex(10px);
 
-  //align-items и justify-content
   @include flex-position;
 
-  //падинги верхний, правый, левый, нижний
-  @include dynamic-padding(20px, 20px, 20px, 20px);
+  @include dynamic-padding(20px, 20px, 10px, 10px);
 
-  //ширина, высота decktop; ширина, высота при width< $mobile-width (файл _variables.scss)
   @include size(460px, 160px, 300px, 100px);
 
   .img {
-    // изменение размера <Image> при width< $mobile-width
-
     @include dynamic-size-img(60px, 80px);
   }
 }
 .wrapper {
   width: 100%;
 
-  // gap 0, display flex, flex-direction row
   @include row-flex(10px);
 
-  //align-items и justify-content
   @include flex-position;
 }
 
 .infoContainer {
-  // gap 0, display flex, flex-direction row
   @include column-flex(20px);
 
-  //align-items и justify-content
   @include flex-position(left, space-between);
 }
 
 .imgContainer {
-  // gap 0, display flex, flex-direction row
   @include row-flex();
 
-  //align-items и justify-content
   @include flex-position;
+
+  @include dynamic-size-svg(18px, 18px, 14px, 14px);
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 }

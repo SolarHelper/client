@@ -1,14 +1,14 @@
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
-import CartSvg from "@/shared/ui/svg/CartSvg";
-import SunSvg from "@/shared/ui/svg/SunSvg";
-import UserSvg from "@/shared/ui/svg/UserSvg";
-import MenuBurgerSvg from "@/shared/ui/svg/MenuBurgerSvg";
+import Cart from "/public/icon/cart.svg";
+import Sun from "/public/icon/sun.svg";
+import UserIcon from "/public/icon/userIcon.svg";
+import MenuBurger from "/public/icon/menuBurger.svg";
 const Navbar = () => {
   return (
     <nav className={styles.container}>
       <Link className={`${styles.logo}  title18`} href="/">
-        <SunSvg />
+        <Sun />
         SolarHelper
       </Link>
       <div className={styles.navbar}>
@@ -26,14 +26,14 @@ const Navbar = () => {
 
         <div className={styles.profile}>
           <Link className={styles.cart} href="/pages/cart">
-            <CartSvg />
+            <Cart />
           </Link>
           <Link className={styles.user} href="/pages/user">
-            <UserSvg />
+            <UserIcon />
           </Link>
         </div>
-        <button>
-          <MenuBurgerSvg />
+        <button className={styles.menuBurger}>
+          <MenuBurger className="title18" />
         </button>
       </div>
     </nav>

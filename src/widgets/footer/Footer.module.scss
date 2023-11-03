@@ -5,11 +5,9 @@
 .wrapper {
   width: 100vw;
   background-color: $dark;
-  //падинги верхний, правый, левый, нижний
 }
 
 .container {
-  //падинги верхний, правый, левый, нижний
   @include dynamic-padding(20px, 20px, 20px, 20px);
 
   @include row-flex(50px);
@@ -25,8 +23,6 @@
   a {
     @include row-flex(10px);
     @include flex-position(center, center);
+    @include dynamic-size-svg(15px, 15px, 13px, 13px);
   }
-  // @media (max-width: $mobile-width) {
-  //   @include flex-position(center, space-between);
-  // }
 }

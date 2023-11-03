@@ -1,7 +1,7 @@
 "use client";
 import style from "@/shared/ui/Inputs/Input.module.scss";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { inputValue } from "@/store/slice/inputSlice/inputSlice";
-import { useDispatch, useSelector } from "react-redux";
 
 interface InputProps {
   placeholder: string;
@@ -10,17 +10,18 @@ interface InputProps {
 }
 
 const Input = ({ placeholder, label, children }: InputProps) => {
-  const value = useSelector((state) => state.input.value);
-  const dispatch = useDispatch();
+  const value = useAppSelector((state) => state.input.value);
+  const dispatch = useAppDispatch();
 
   return (
     <div className={style.container}>
-      <label className="title18" htmlFor={label}>
-        {label}
-      </label>
+      {label && (
+        <label className="title18" htmlFor={label}>
+          {label}
+        </label>
+      )}
       <div className={style.inputContainer}>
         <input
-          defaultValue={value}
           onChange={(e) => dispatch(inputValue(e.target.value))}
           className={`${style.input} subtitle12`}
           type="text"

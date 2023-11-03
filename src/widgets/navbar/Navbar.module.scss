@@ -2,23 +2,15 @@
 @import "../../app/styles/colors.scss";
 @import "../../app/styles/variables.scss";
 .container {
-  // gap 0, display flex, flex-direction row
   @include row-flex;
-
-  //падинги верхний, правый, левый, нижний
   @include dynamic-padding(0, 20px, 0, 20px);
 
   max-width: var(--max-width);
   margin: 0 auto;
-
-  //align-items и justify-content
   @include flex-position(center, space-between);
-
-  //ширина, высота decktop; ширина, высота при width< $mobile-width (файл _variables.scss)
   @include size(100%, 80px, 100%, 60px);
 }
 .navbar {
-  // gap 0, display flex, flex-direction row
   @include row-flex(40px, flex, row);
 
   @include flex-position(center, space-between);
@@ -61,19 +53,21 @@
 }
 
 .logo {
-  // gap 0, display flex, flex-direction row
   @include flex-position(center);
 
   @include row-flex(12px, flex, row);
 
-  //svg - ширина, высота decktop; ширина, высота при width<$mobile-width
   @include dynamic-size-svg(43px, 40px, 24px, 20px);
 }
+
+.logo,
+.menuBurger {
+  @include dynamic-size-svg(43px, 40px, 24px, 20px);
+}
+
 .cart {
-  //svg - ширина, высота decktop; ширина, высота при width<$mobile-width
   @include dynamic-size-svg(40px, 34px, 23px, 20px);
 }
 .user {
-  //svg - ширина, высота decktop; ширина, высота при width<$mobile-width
   @include dynamic-size-svg(23px, 30px, 20px, 20px);
 }

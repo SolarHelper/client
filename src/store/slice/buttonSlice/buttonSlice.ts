@@ -2,12 +2,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface initialState {
-  value: boolean;
+  // value: boolean;
 }
 
 const initialState = {
   // Создаем переменную для сохранения данных которые приходят c action.payload (переменных может быть сколько угодно)
-  value: true,
+  value: {},
 };
 
 export const buttonSlice = createSlice({
@@ -15,8 +15,8 @@ export const buttonSlice = createSlice({
   initialState,
   reducers: {
     // Функции которые мы экспортируем наружу, для того чтобы забрать данные и обработать их здесь
-    buttonValue: (state) => {
-      console.log((state.value = !state.value));
+    buttonValue: (state, action) => {
+      console.log(action.payload);
     },
   },
 });

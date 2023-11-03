@@ -1,29 +1,27 @@
 "use client";
 import style from "@/shared/ui/counter/Counter.module.scss";
-import ArrowLeftSvg from "../svg/ArrowLeftSvg";
-import ArrowRightSvg from "../svg/ArrowRightSvg";
-import { useDispatch, useSelector } from "react-redux";
+import Arrow from "/public/icon/ArrowLeft.svg";
 import { increment, decrement } from "@/store/slice/counterSlice/counterSlice";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
 interface CounterProps {
   NumberOfProducts: number;
 }
 const Counter = ({ NumberOfProducts }: CounterProps) => {
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  const count = useAppSelector((state) => state.counter.value);
+  const dispatch = useAppDispatch();
   return (
     <span className={style.container}>
       <button className={style.btn} onClick={() => dispatch(decrement())}>
-        <ArrowLeftSvg />
+        <Arrow />
       </button>
       <input
         className={`${style.input} subtitle12`}
         placeholder="0"
         type="text"
-        value={count}
       />
       <button className={style.btn} onClick={() => dispatch(increment())}>
-        <ArrowRightSvg />
+        <Arrow className={style.rightArrow} />
       </button>
     </span>
   );

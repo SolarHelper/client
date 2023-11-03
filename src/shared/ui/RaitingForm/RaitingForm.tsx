@@ -1,5 +1,6 @@
 import style from "@/shared/ui/RaitingForm//RaitingForm.module.scss";
-import StarSvg from "../svg/StarSvg";
+import Star from "/public/icon/Star.svg";
+
 interface RaitingFormProps {
   productRaiting: number;
 }
@@ -7,11 +8,11 @@ interface RaitingFormProps {
 const RaitingForm = ({ productRaiting }: RaitingFormProps) => {
   return (
     <div className={style.raiting}>
-      <StarSvg />
-      <StarSvg />
-      <StarSvg />
-      <StarSvg />
-      <StarSvg />
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+      <Star />
     </div>
   );
 };

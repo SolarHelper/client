@@ -5,18 +5,18 @@ import RaitingForm from "@/shared/ui/RaitingForm/RaitingForm";
 import Counter from "@/shared/ui/Counter/Counter";
 import Button from "@/shared/ui/Buttons/Button";
 import BasketSvg from "@/shared/ui/svg/BasketSvg";
+
 interface CardProductProps {
   productName: string;
   productPrice: number;
   productRaiting: number;
   NumberOfProducts: number;
 }
-const CardProduct = ({
-  productName,
-  productPrice,
-  productRaiting,
-  NumberOfProducts,
-}: CardProductProps) => {
+
+const CardProduct = (props: CardProductProps) => {
+  const { productName, productPrice, productRaiting, NumberOfProducts } = {
+    ...props,
+  };
   return (
     <section className={style.container}>
       <Image

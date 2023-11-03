@@ -61,8 +61,9 @@
 }
 
 // gap 0, display flex, flex-direction column
-@mixin column-flex($gap: 0) {
-  flex-direction: column;
+@mixin column-flex($gap: 0, $display: flex, $direction: column) {
+  display: $display;
+  flex-direction: $direction;
   row-gap: $gap;
   @media (max-width: $tablet-width) {
     row-gap: calc($gap * 0.5);
@@ -95,6 +96,8 @@
 //svg - ширина, высота decktop; ширина, высота при width< $tablet-width (файл _variables.scss) (mixin применять к тегу, в который вложен тег svg)
 @mixin dynamic-size-svg($width, $height, $media-width, $media-height) {
   svg {
+    width: $width;
+    height: $height;
     @media (max-width: $tablet-width) {
       width: $media-width;
       height: $media-height;
@@ -120,11 +123,15 @@
 }
 
 //падинги верхний, правый, левый, нижний
-@mixin dynamic-padding($top, $right, $bottom, $left) {
-  padding: $top $right $bottom $left;
+@mixin dynamic-padding(
+  $top-bottom,
+  $right-left,
+  $media-top-bottom,
+  $media-right-left
+) {
+  padding: $top-bottom $right-left;
   @media (max-width: $tablet-width) {
-    padding: calc($top * 0.5) calc($right * 0.5) calc($bottom * 0.5)
-      calc($left * 0.5);
+    padding: $media-top-bottom $media-right-left;
   }
 }
 
@@ -141,11 +148,13 @@
   $font-size-max,
   $font-size-min,
   $line-height,
-  $font-weight
+  $font-weight,
+  $color: $dark
 ) {
   font-size: $font-size-max;
   line-height: $line-height;
   font-weight: $font-weight;
+  color: $color;
   @media (max-width: $tablet-width) {
     font-size: $font-size-min;
   }
