@@ -1,0 +1,21 @@
+.selectInput {
+    &__control {
+        margin-top: 6px;
+        height: 60px !important;
+        border-radius: 15px !important;
+        border: 1px solid #1B1F29 !important;
+    }
+    &__value-container {
+        height: 35px !important;
+    }
+    &__multi-value {
+        margin-left: 14px !important;
+        width: auto !important;
+        font-size: 16px !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        background-color: initial !important;
+        border-radius: 15px !important;
+        border: 1px solid  #1B1F29 !important;
+    }
+}
