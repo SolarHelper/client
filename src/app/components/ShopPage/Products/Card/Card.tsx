@@ -4,15 +4,16 @@ import Link from 'next/link';
 import RatingStar from './RatingStar/RatingStar';
 import Button from './BuyButton/Button';
 import ArrowButton from './ArrowButton/ArrowButton';
+import { useRouter } from 'next/router';
 import { PropsCard } from './types';
-const Card: React.FC<PropsCard> = ({item}, key) => {
+const Card: React.FC<PropsCard> = ({item}) => {
   
   return (
     <>
       {/* Карточка товара */}
       <div className={classes.item}>
         {/* Линк, переход в карточку товара */}
-        <Link className={classes.cardLink} href="">
+        <Link className={classes.cardLink} href={`/pages/shop/${item.id}`} >
           {/* Изображение товара */}
             
           <img className={classes.cardImage} src={item.photo} />
@@ -31,7 +32,7 @@ const Card: React.FC<PropsCard> = ({item}, key) => {
             <ArrowButton pathToImage={'/svg/ArrowRight.svg'} />
           </div>
           {/* Кнопка покупки товара */}
-          <Button width={15} height={16} image='/svg/shopCartIcon.svg'>Купить</Button>
+          <Button width={15} height={16} image='/svg/shopCartIcon.svg'>В корзину</Button>
         </div>
       </div>
     </>

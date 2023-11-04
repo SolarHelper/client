@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import FilterInput from './FilterInput/FilterInput';
 import RangePrice from './RangePrice/RangePrice';
 import classes from './Categories.module.scss';

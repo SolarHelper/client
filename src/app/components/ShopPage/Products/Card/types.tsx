@@ -1,6 +1,7 @@
 export type Item ={
+  id:number;
   additional : string;
-  brand : string;
+  brand? : string | undefined;
   country_of_registration_of_brand : string;
   depth_mm : number;
   height : number;

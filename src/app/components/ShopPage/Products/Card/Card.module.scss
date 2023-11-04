@@ -62,6 +62,8 @@
     width: 50%;
     max-width: 140px;
     min-width: 46%;
+    gap: 15px;
+    min-height: 370px;
   }
   .products {
     min-width: 100%;
@@ -82,6 +84,7 @@
     width: 50%;
     max-width: 140px;
     min-width: 40%;
+    gap: 10px;
   }
 
   .cardImage {
@@ -90,6 +93,10 @@
   }
 }
 @media (max-width: 500px) {
+  .item {
+    gap: 5px;
+    min-height: 370px;
+  }
   .btnBlock {
     display: flex;
     flex-direction: column;
@@ -99,5 +106,8 @@
   .cardImage {
     width: 50%;
     height: 130px;
+  }
+  .itemName {
+    @include interRegular(12px, $second-color);
   }
 }

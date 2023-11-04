@@ -42,8 +42,8 @@ const Shop = () => {
           <div className={classes.cards}>
             {/* Карточка товара */}
             
-           { data.map((item:Item, index:number)=>(
-            <Card key={index} item={item}/>
+           { data.map((item:Item)=>(
+            <Card key={item.id} item={item}/>
           ))
           }
           </div>

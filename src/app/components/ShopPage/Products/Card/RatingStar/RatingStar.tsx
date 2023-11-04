@@ -1,16 +1,15 @@
 import React from 'react';
-import Image from 'next/image';
 import classes from './RatingStart.module.scss';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 const RatingStar = () => {
   return (
     <div className={classes.ratingWrapper}>
       <div className={classes.ratingStars}>
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
-        <Image className={classes.star} src="/svg/star.svg" alt="" width={16} height={15} />
+        <Stack spacing={1}>
+          <Rating name="half-rating-read" defaultValue={4} precision={1} readOnly />
+        </Stack>
       </div>
     </div>
   );

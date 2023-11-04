@@ -10,7 +10,7 @@
   background: $btn-color;
   border: none;
   border-radius: 15px;
-  @include interBold(12px, $second-color);
+  @include interBold(16px, $second-color);
   padding: 20px;
   .image {
     margin-left: 20px;

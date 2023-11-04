@@ -1,6 +1,7 @@
 [
   {	
-  "brand":	"Longi Solar",
+  "id": 1,
+  "rand":	"Longi Solar",
   "model": "Longi Solar LR5-54HTH-430M HPBC Hi-MO 6",
   "type":	"Монокристаллическая солнечная панель",
   "nominal_power_watt":	430,
@@ -20,6 +21,7 @@
   "price": 5186
   },
   {
+  "id": 2,
   "brand":	"Longi Solar",
   "model": "Longi Solar LR5-72HTH-580M",
   "type":	"Монокристаллическая солнечная панель",
@@ -40,6 +42,7 @@
   "price": 7384
   },
   {
+  "id": 3,
   "brand":	"EcoFlow",
   "model": "EcoFlow 400W Rigid Solar Panel (SOLAR400WRIGID)",
   "type":	"Монокристаллическая солнечная панель",
@@ -59,6 +62,7 @@
   "price": 16999
   },
   {
+  "id": 4,
   "brand":	"Longi Solar",
   "model": "Longi Solar LR5-54HIH-410M",
   "type":	"Монокристаллическая солнечная панель",
@@ -79,6 +83,7 @@
   "price": 5632 
   },
   {
+  "id": 5,
   "brand":	"JA Solar",
   "model": "JA Solar JAM72S30-550/MR ",
   "type":	"Монокристаллическая солнечная панель",
@@ -96,9 +101,10 @@
   "country_of_registration_of_brand":	"Китай",
   "additional":	"Рабочая температура, °С: -40...+85",
   "photo": "https://hotline.ua/img/tx/412/4121030555.jpg",
-  "price": 700 
+  "price": 7000
   },
   {
+  "id": 6,
   "brand":	"Axioma Energy",
   "model": "Axioma Energy AXM144-16-182-550N",
   "type":	"Монокристаллическая солнечная панель",
@@ -116,9 +122,10 @@
   "country_of_registration_of_brand":	"Китай",
   "additional":	"Рабочая температура, °С: -40... + 85",
   "photo": "https://hotline.ua/img/tx/395/3954146815.jpg",
-  "price": 600 
+  "price": 6000
   },
   {
+  "id": 7,
   "brand":	"Risen",
   "model": "Risen RSM110-8-545M TITAN",
   "type": "Монокристаллическая солнечная панель",
@@ -135,10 +142,11 @@
   "weight_kg":	29,
   "country_of_registration_of_brand":	"Китай",
   "additional":	"Рабочая температура, °С: -40...+85",
-  "price": 750,
+  "price": 7500,
   "photo": "https://hotline.ua/img/tx/404/4046781445.jpg"
   },
   {
+  "id": 8,
   "brand":	"Leapton Solar",
   "model": "Leapton Solar LP210*210-M-66-MH 650W Half Cell",
   "type":	"Монокристаллическая солнечная панель",
@@ -155,9 +163,10 @@
   "weight_kg":	34,
   "country_of_registration_of_brand":	"Китай",
   "additional":	"Рабочая температура, °С: -40...+87",
-  "price": 861,
+  "price": 8610,
   "photo": "https://hotline.ua/img/tx/345/3459302565.jpg"
   },{
+  "id": 9,
   "brand":	"Axioma Energy",
   "model" : "Axioma Energy AM 430 B5",
   "type":	"Монокристаллическая солнечная панель",
@@ -178,6 +187,7 @@
   "photo": "https://hotline.ua/img/tx/398/3983678805.jpg"
   },
   {
+  "id": 10,
   "brand":	"Jinko Solar",
   "model": "Jinko Solar JKM420N-54HL4-V Mono N-Type",
   "type":	"Монокристаллическая солнечная панель",
@@ -198,6 +208,7 @@
   "photo": "https://hotline.ua/img/tx/413/4130100135.jpg"
   },
   {
+  "id": 11,
   "brand":	"Leapton Solar",
   "model": "Leapton Solar LP182*182-M-60-MH-460W Mono",
   "type":	"Монокристаллическая солнечная панель",
@@ -218,6 +229,7 @@
   "photo": "https://hotline.ua/img/tx/402/4022828555.jpg"
   },
   {
+  "id": 12,
   "brand":	"EcoFlow",
   "model": "EcoFlow 2*400W Rigid Solar Panel (SOLAR2*400W) ",
   "type":	"Монокристаллическая солнечная панель",
@@ -236,6 +248,7 @@
   "price": 3599,
   "photo": "https://hotline.ua/img/tx/359/3594266275.jpg"
   },{
+  "id": 13,
   "brand":	"Longi Solar",
   "model": "Longi Solar LR5-72HIH-550M Hi-MO5 ",
   "type":	"Монокристаллическая солнечная панель",
@@ -255,6 +268,7 @@
   "photo": "https://hotline.ua/img/tx/395/3954146825.jpg"
   },
   {
+  "id": 14,
   "brand":	"Jinko Solar",
   "model": "Jinko Solar JKM545M-72HL4-V Tiger PRO",
   "type":	"Монокристаллическая солнечная панель",
