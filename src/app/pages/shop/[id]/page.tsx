@@ -39,7 +39,7 @@ const Product = ({ params: { id } }) => {
                     type="tel"
                     name="phone"
                     placeholder="+380931111111"
-                    pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                    pattern=""
                     minlength="13"
                     maxlength="13"
                 />

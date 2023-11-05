@@ -25,7 +25,6 @@ const Shop = () => {
         <div className={classes.products}>
           {/* Поиск по товару */}
           <SearchInput />
-          
           <div className={classes.buttonBlock}>
             <div className={classes.button} onClick={buttonHandler}>
               <Button width={25} height={26} image="/svg/filter.svg">

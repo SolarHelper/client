@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './Button.module.scss';
-const Button = ({children,width, height, image}) => {
+import { ButtonProps } from './types';
+
+const Button = ({children,width, height, image}:ButtonProps) => {
   
   return (
     <button className={classes.btn}>
