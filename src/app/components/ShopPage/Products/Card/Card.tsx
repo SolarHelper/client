@@ -32,7 +32,7 @@ const Card: React.FC<PropsCard> = ({item}) => {
             <ArrowButton pathToImage={'/svg/ArrowRight.svg'} />
           </div>
           {/* Кнопка покупки товара */}
-          <Button width={15} height={16} image='/svg/shopCartIcon.svg'>В корзину</Button>
+          <Button propsClass='btn' width={15} height={16} image='/svg/shopCartIcon.svg'>В корзину</Button>
         </div>
       </div>
     </>

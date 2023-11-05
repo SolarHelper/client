@@ -27,12 +27,12 @@ const Shop = () => {
           <SearchInput />
           <div className={classes.buttonBlock}>
             <div className={classes.button} onClick={buttonHandler}>
-              <Button width={25} height={26} image="/svg/filter.svg">
+              <Button propsClass='filter' width={25} height={26} image="/svg/filter.svg">
                 Фильтрация
               </Button>
               
             </div>
-            <Button width={25} height={26} image="/svg/filter.svg">
+            <Button propsClass='sortBy' width={25} height={26} image="/svg/filter.svg">
               Сортировка
             </Button>
           </div>

@@ -3,10 +3,10 @@ import Image from 'next/image';
 import classes from './Button.module.scss';
 import { ButtonProps } from './types';
 
-const Button = ({children,width, height, image}:ButtonProps) => {
+const Button = ({children,width, height, image, propsClass}:ButtonProps) => {
   
   return (
-    <button className={classes.btn}>
+    <button className={classes[propsClass]}>
       {children}
       <Image 
         className={classes.image} 

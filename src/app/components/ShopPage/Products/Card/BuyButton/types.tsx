@@ -3,4 +3,5 @@ export type ButtonProps = {
   width: number,
   height: number,
   image: string,
+  propsClass?:string | undefined
 }
