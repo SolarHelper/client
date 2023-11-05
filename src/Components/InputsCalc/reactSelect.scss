@@ -1,21 +1,38 @@
 .selectInput {
+  &__control {
+    margin-top: 6px;
+    min-height: 60px !important;
+    border-radius: 15px !important;
+    border: 1px solid #1b1f29 !important;
+  }
+  &__value-container {
+    height: 35px !important;
+  }
+  &__multi-value {
+    overflow: initial !important;
+    margin-left: 14px !important;
+    width: auto !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    background-color: initial !important;
+    border-radius: 15px !important;
+    border: 1px solid #1b1f29 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .selectInput {
     &__control {
-        margin-top: 6px;
-        height: 60px !important;
-        border-radius: 15px !important;
-        border: 1px solid #1B1F29 !important;
+      min-height: 60px !important;
     }
     &__value-container {
-        height: 35px !important;
+      min-height: 30px !important;
+      align-content: center !important;
+      overflow: initial !important;
     }
     &__multi-value {
-        margin-left: 14px !important;
-        width: auto !important;
-        font-size: 16px !important;
-        font-style: normal !important;
-        font-weight: 400 !important;
-        background-color: initial !important;
-        border-radius: 15px !important;
-        border: 1px solid  #1B1F29 !important;
+      font-size: 10px !important;
     }
+  }
 }

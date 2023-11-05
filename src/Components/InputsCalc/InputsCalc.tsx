@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
+import Select from 'react-select';
 
 import styles from './inputsCalc.module.scss';
 import './reactSelect.scss';
@@ -39,7 +39,7 @@ const InputsCalc: React.FC = () => {
               noOptionsMessage={() => 'No more options'}
               closeMenuOnSelect={false}
               components={animatedComponents}
-              defaultValue={[options[0], options[1]]}
+              defaultValue={[options[0], options[1], options[2]]}
               isMulti
               options={options}
             />

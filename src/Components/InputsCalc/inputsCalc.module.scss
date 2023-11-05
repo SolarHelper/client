@@ -1,64 +1,121 @@
 .calc {
-    .container {
-        width: 1140px;
-        margin: 0 auto;
-    }
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+  }
+  &__wrapper {
+    padding: 0 20px;
+  }
+  &__energy {
+    margin-top: 50px;
     &__wrapper {
-        padding: 0 20px;
+      position: relative;
+      width: 100%;
+      border-radius: 15px;
+      border: 1px solid #1b1f29;
+      height: 60px;
+      font-size: 16px;
+      padding: 0 20px;
+    }
+  }
+  .energyInput {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    padding-right: 40px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .spantext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  &__title {
+    color: #1b1f29;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  &__equipment {
+    margin-top: 20px;
+  }
+  &__btn {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    width: 140px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: #fcb222;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+      background: #fcb222;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .calc {
+    .container {
+      width: 960px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .calc {
+    .container {
+      width: 720px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .calc {
+    .container {
+      width: 540px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .calc {
+    .container {
+      width: 320px;
     }
     &__energy {
-        margin-top: 50px;
-        &__wrapper {
-            width: 100%;
-            border-radius: 15px;
-            border: 1px solid  #1B1F29;
-            height: 60px;
-            font-size: 16px;
-            padding: 0 20px;
-        }
+      &__wrapper {
+        height: 30px;
+      }
+    }
+    &__wrapper {
+      padding: 0 10px;
     }
     .energyInput {
-        height: 100%;
-        width: 94%;
-        font-size: 16px;
-        border: none;
-        padding-right: 40px;
-        &:focus {
-            outline: none;
-          }
+      font-size: 10px;
     }
     .spantext {
-        color: #000;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-    }
-    &__title {
-        color: #1B1F29;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        margin-bottom: 6px;
-    }
-    &__equipment {
-        margin-top: 20px;
+      font-size: 10px;
     }
     &__btn {
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: 20px;
-        display: flex;
-        width: 140px;
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 15px;
-        background: #FCB222;
-        border: none;
-        cursor: pointer;
-        &:hover {
-            opacity: 0.8;
-            background:  #FCB222;
-          }
+      width: 120px;
+      height: 34px;
+      font-size: 10px;
+      margin-right: 10px;
     }
+  }
 }

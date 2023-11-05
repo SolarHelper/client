@@ -18,6 +18,7 @@ const CardCalc: React.FC = () => {
               <Image
                 className={styles.order__image__img}
                 src={TestCard}
+                priority={false}
                 width={88}
                 height={120}
                 alt="card"
@@ -63,6 +64,7 @@ const CardCalc: React.FC = () => {
               <Image
                 className={styles.order__image__img}
                 src={TestCard}
+                priority={false}
                 width={88}
                 height={120}
                 alt="card"
@@ -108,6 +110,7 @@ const CardCalc: React.FC = () => {
               <Image
                 className={styles.order__image__img}
                 src={TestCard}
+                priority={false}
                 width={88}
                 height={120}
                 alt="card"
@@ -153,6 +156,7 @@ const CardCalc: React.FC = () => {
               <Image
                 className={styles.order__image__img}
                 src={TestCard}
+                priority={false}
                 width={88}
                 height={120}
                 alt="card"
@@ -194,36 +198,7 @@ const CardCalc: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className={styles.order__info}>
-          <h2>Итог</h2>
-          <ul>
-            <li className={styles.order__info__list}>
-              <div>
-                <div className={styles.order__info__name}>Солнечная панель</div>
-                <div className={styles.order__info__model}>Risen RSM40-8-410M</div>
-              </div>
-              <div className={styles.price}>20000 грн</div>
-            </li>
-            <li className={styles.order__info__list}>
-              <div>
-                <div className={styles.order__info__name}>Солнечная панель</div>
-                <div className={styles.order__info__model}>Risen RSM40-8-410M</div>
-              </div>
-              <div className={styles.price}>20000 грн</div>
-            </li>
-            <li className={styles.order__info__list}>
-              <div>
-                <div className={styles.order__info__name}>Солнечная панель</div>
-                <div className={styles.order__info__model}>Risen RSM40-8-410M</div>
-              </div>
-              <div className={styles.price}>20000 грн</div>
-            </li>
-          </ul>
-          <div className={styles.allprice}>
-            <div className={styles.order__info__model}>Итоговая сумма</div>
-            <div className={styles.price}>40000 грн</div>
-          </div>
-        </div>
+        <button>В корзину</button>
       </div>
     </section>
   );
