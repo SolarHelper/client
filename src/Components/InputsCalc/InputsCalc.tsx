@@ -2,7 +2,7 @@
 
 import React from 'react';
 import makeAnimated from 'react-select/animated';
-import Select from 'react-select';
+import dynamic from 'next/dynamic';
 
 import styles from './inputsCalc.module.scss';
 import './reactSelect.scss';
@@ -15,6 +15,7 @@ type TOptions = {
 const animatedComponents = makeAnimated();
 
 const InputsCalc: React.FC = () => {
+  const Select = dynamic(() => import('react-select').then((mod) => mod.default), { ssr: false });
   const options: TOptions[] = [
     { value: 'тип', label: 'Тип' },
     { value: 'категория', label: 'Категория' },
