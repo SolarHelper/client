@@ -25,4 +25,7 @@
     @include flex-position(center, center);
     @include dynamic-size-svg(15px, 15px, 13px, 13px);
   }
+  .link {
+    border-bottom: 1px dashed $light;
+  }
 }

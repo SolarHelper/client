@@ -15,11 +15,14 @@ const Footer = () => {
           <Message />
           support@solar.ua
         </Link>
-        <Link href="/pages/political" className="subtitle12">
-          <abbr title="political">Политика конфиденциальности </abbr>
+        <Link className={`${style.link} subtitle12`} href="/pages/political">
+          Политика конфиденциальности
         </Link>
-        <Link href="/pages/forInstallers" className="subtitle12">
-          <abbr title="forInstallers">Компаниям-инсталяторам</abbr>
+        <Link
+          href="/pages/forInstallers"
+          className={`${style.link} subtitle12`}
+        >
+          Компаниям-инсталяторам
         </Link>
       </div>
     </div>

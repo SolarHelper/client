@@ -1,7 +1,7 @@
 import style from "@/widgets/CardProduct/CardProduct.module.scss";
 import Image from "next/image";
 import cardProduct from "/public/cardImage/cardProduct1.png";
-import RaitingForm from "@/shared/ui/RaitingForm/RaitingForm";
+import RatingForm from "@/shared/ui/RatingForm/RatingForm";
 import Counter from "@/shared/ui/Counter/Counter";
 import Button from "@/shared/ui/Buttons/Button";
 import BasketSvg from "@/shared/ui/svg/BasketSvg";
@@ -25,14 +25,19 @@ const CardProduct = (props: CardProductProps) => {
         alt="product"
         width={140}
         height={190}
-      ></Image>
+      />
       <div className={style.infoContainer}>
         <div className="subtitle18">{productName}</div>
         <div className="title18">{productPrice}p </div>
-        <RaitingForm productRaiting={productRaiting}></RaitingForm>
+        <RatingForm productRaiting={productRaiting} />
       </div>
       <div className={style.btnContainer}>
-        <Counter NumberOfProducts={NumberOfProducts}></Counter>
+        <Counter
+          value={value}
+          decrement={decrement}
+          increment={increment}
+          NumberOfProducts={NumberOfProducts}
+        />
         <Button>
           в корзину
           <BasketSvg />
