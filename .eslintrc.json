@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["airbnb"],
+  "plugins": ["prettier"],
+  "eslint.autoFix": true,
+  "rules": {
+    "prettier/prettier": "error"
+  }
 }

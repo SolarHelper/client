@@ -2,48 +2,58 @@
 @import '../../../../../styles/variables';
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  color: $main-color;
-  background: $btn-color;
-  border: none;
-  border-radius: 15px;
   @include interBold(16px, $second-color);
-  padding: 20px;
-  .image {
-    margin-left: 20px;
-  }
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	color: $second-color;
+	background: $btn-color;
+	border: none;
+	border-radius: 15px;
+	padding: 20px;
+	.image {
+		margin-left: 20px;
+	}
 }
 .filter {
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  color: $main-color;
-  background: $btn-color;
-  border: none;
-  border-radius: 15px;
   @include interBold(16px, $second-color);
-  padding: 20px;
-  .image {
-    margin-left: 20px;
-  }
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	color: $second-color;
+	background: $btn-color;
+	border: none;
+	border-radius: 15px;
+	padding: 20px;
+	.image {
+		margin-left: 20px;
+	}
 }
-.sortBy{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sortBy {
+  @include interBold(16px, $second-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	color: $main-color;
+	background: $btn-color;
+	border: none;
+	border-radius: 15px;
+	padding: 20px;
+	.image {
+		margin-left: 20px;
+	}
 }
 
-@media (max-width: 768px) {
-  .btn {
-    @include interBold(14px, $second-color);
-    padding: 11px;
-    display: flex;
-  }
-  .filter{
-    display: flex;
-  }
+@media(max-width: 768px) {
+	.btn {
+		@include interBold(14px, $second-color);
+		padding: 11px;
+		display: flex;
+	}
+	.filter {
+		display: flex;
+	}
 }

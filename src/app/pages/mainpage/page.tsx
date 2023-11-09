@@ -10,16 +10,16 @@ const serviceInfo = mock_api.getServiceInfo();
 const specialistList = mock_api.getSpecialist();
 
 const MainPage = () => {
-  return (
-    <div className={classes.wrapper}>
-      <div className={classes.container}>
-        <Banner />
-        <Services infoPanel={serviceInfo} />
-        <Specialists infoSpecialist={specialistList} />
-        <Services infoPanel={serviceInfo} />
-      </div>
-    </div>
-  );
+	return (
+		<div className={classes.wrapper}>
+			<div className={classes.container}>
+				<Banner />
+				<Services infoPanel={serviceInfo} />
+				<Specialists infoSpecialist={specialistList} />
+				<Services infoPanel={serviceInfo} />
+			</div>
+		</div>
+	);
 };
 
 export default MainPage;

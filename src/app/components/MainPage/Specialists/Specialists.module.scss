@@ -2,82 +2,79 @@
 @import '../../../styles/mixins';
 
 .wrapper {
-  width: 100%;
-  background: $second-color;
-  color: $main-color;
-  height: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  box-sizing: border-box;
+	width: 100%;
+	background: $second-color;
+	color: $main-color;
+	height: 260px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	box-sizing: border-box;
 }
 
 .title {
-  text-align: center;
   @include interBold(24px, $main-color);
+	text-align: center;
 }
 
 .textWrapper {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
 }
 
 .text {
-  width: 20%;
-  text-align: center;
+	width: 20%;
+	text-align: center;
 }
 
 .paragraphFirst {
-  @include interBold(32px, $main-color);
+	@include interBold(32px, $main-color);
 }
 
 .paragraphSecond {
-  @include interRegular(18px, $main-color);
+	@include interRegular(18px, $main-color);
 }
 
 @media (max-width: 914px) {
-  .wrapper {
-    width: 720px;
-  }
+	.wrapper {
+		width: 720px;
+	}
 }
 
 @media (max-width: 720px) {
-  .wrapper {
-    width: 450px;
-  }
+	.wrapper {
+		width: 450px;
+	}
 }
 
 @media (max-width: 450px) {
-  
-  .wrapper {
-    width: 320px;
-    height: 171px;
-  }
+	.wrapper {
+		width: 320px;
+		height: 171px;
+	}
 
-  .title {
-    @include interBold(14px, $main-color);
-  }
+	.title {
+		@include interBold(14px, $main-color);
+	}
 
-  .textWrapper {
-    flex-direction: column;
-    width: 60%;
-    margin: 0 auto;
-  }
+	.textWrapper {
+		flex-direction: column;
+		width: 60%;
+		margin: 0 auto;
+	}
 
-  .text {
-    display: flex;
-  }
+	.text {
+		display: flex;
+	}
 
-  .paragraphFirst {
-    @include interBold(14px, $main-color);
-    width: 50px;
-  }
+	.paragraphFirst {
+		@include interBold(14px, $main-color);
+		width: 50px;
+	}
 
-  .paragraphSecond {
-    @include interRegular(12px, $main-color);
-    text-wrap: nowrap;
-  }
-
+	.paragraphSecond {
+		@include interRegular(12px, $main-color);
+		text-wrap: nowrap;
+	}
 }
-

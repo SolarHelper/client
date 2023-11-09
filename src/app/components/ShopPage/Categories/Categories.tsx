@@ -1,27 +1,26 @@
 import React from 'react';
-import FilterInput from './FilterInput/FilterInput';
 import RangePrice from './RangePrice/RangePrice';
 import classes from './Categories.module.scss';
-import Link from 'next/link';
-const Categories = ({buttonHandler, visible}) => {
-  
-  return (
-    <div className={classes.wrapper}
-    >
-      <Link href='#' onClick={buttonHandler}/>
-      <div className={visible ? classes.visible: classes.notVisible}>
-        
-        <h1 className={classes.title}>Категории</h1>
-        {/* Блок фильтров */}
-        {/* Чекбокс фильтрации Инверторы,Панели */}
-        <FilterInput title={'Наши продукты'} />
-        {/* Фильтрация по цене */}
-        <RangePrice title={'Цена'} />
-        {/* Чекбокс фильтрации по номинальной мощности */}
-        <FilterInput title={'Номинальная мощность, Вт'} />
-      </div>
-    </div>
-  );
+
+const Categories = ({ visible, handleButton, filterValue }) => {
+	return (
+		<div className={classes.wrapper}>
+			<div className={visible ? classes.visible : classes.notVisible}>
+				<div className={classes.buttonBlock}>
+					<p className={classes.categories}>Категории</p>
+					<button onClick={handleButton} className={classes.btn}>
+						Солнечные панели
+					</button>
+					<button onClick={handleButton} className={classes.btn}>
+						Инверторы
+					</button>
+				</div>
+				<RangePrice title={'Цена'} />
+				{/* Чекбокс фильтрации по номинальной мощности */}
+				<p className={classes.categories}>Мощность Вт.</p>
+			</div>
+		</div>
+	);
 };
 
 export default Categories;

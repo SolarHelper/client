@@ -2,112 +2,110 @@
 @import '../../../../styles/variables';
 
 .item {
-  min-width: 32.87%;
-  width: 32.87%;
-  @include flexColumn;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  @include interRegular(18px, $second-color);
-  border-radius: 15px;
-  border: solid 1px $second-color;
-  gap: 20px;
+	@include flexColumn;
+	@include interRegular(18px, $second-color);
+	min-width: 32.87%;
+	width: 32.87%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 15px;
+	border: solid 1px $second-color;
+	gap: 20px;
 }
 .cardLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
 }
 .cardImage {
-  width: 60%;
-  height: 187px;
-  margin: 20px 0 0 0;
+	margin: 20px 0 0 0;
 }
 .cardBlock {
-  @include flexColumn;
-  width: 85%;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+	@include flexColumn;
+	width: 85%;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
 }
 .itemName,
 .itemPriceCount {
-  width: 100%;
+	width: 100%;
 }
 .itemPriceCount {
-  @include interBold(18px, $second-color);
+	@include interBold(18px, $second-color);
 }
 
 .btnBlock {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
 }
 .counter {
-  width: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	width: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  .count {
-    @include interRegular(14px, $second-color);
-  }
+	.count {
+		@include interRegular(14px, $second-color);
+	}
 }
 
 @media (max-width: 927px) {
-  .item {
-    width: 50%;
-    max-width: 140px;
-    min-width: 46%;
-    gap: 15px;
-    min-height: 370px;
-  }
-  .products {
-    min-width: 100%;
-  }
-  .itemName {
-    @include interRegular(14px, $second-color);
-  }
-  .itemPriceCount {
-    @include interBold(14px, $second-color);
-  }
-  .cardImage {
-    width: 50%;
-    height: 180px;
-  }
+	.item {
+		width: 50%;
+		max-width: 140px;
+		min-width: 46%;
+		gap: 15px;
+		min-height: 370px;
+	}
+	.products {
+		min-width: 100%;
+	}
+	.itemName {
+		@include interRegular(14px, $second-color);
+	}
+	.itemPriceCount {
+		@include interBold(14px, $second-color);
+	}
+	.cardImage {
+		width: 50%;
+		height: 180px;
+	}
 }
 @media (max-width: 768px) {
-  .item {
-    width: 50%;
-    max-width: 140px;
-    min-width: 40%;
-    gap: 10px;
-  }
+	.item {
+		width: 50%;
+		max-width: 140px;
+		min-width: 40%;
+		gap: 10px;
+	}
 
-  .cardImage {
-    width: 50%;
-    height: 200px;
-  }
+	.cardImage {
+		width: 50%;
+		height: 200px;
+	}
 }
 @media (max-width: 500px) {
-  .item {
-    gap: 5px;
-    min-height: 370px;
-  }
-  .btnBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .cardImage {
-    width: 50%;
-    height: 130px;
-  }
-  .itemName {
-    @include interRegular(12px, $second-color);
-  }
+	.item {
+		gap: 5px;
+		min-height: 370px;
+	}
+	.btnBlock {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.cardImage {
+		width: 50%;
+		height: 130px;
+	}
+	.itemName {
+		@include interRegular(12px, $second-color);
+	}
 }

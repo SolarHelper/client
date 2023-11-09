@@ -1,5 +1,5 @@
-import { ServiceProps } from "@/app/components/MainPage/Services/Service.types";
-import { SpecialistProps } from "@/app/components/MainPage/Specialists/Specialist.types";
+import { ServiceProps } from "@/app/types";
+import { SpecialistProps } from "@/app/types";
 export const mock_api = {
   getServiceInfo():ServiceProps[] {
     return [
