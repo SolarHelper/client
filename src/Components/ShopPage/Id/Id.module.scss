@@ -1,0 +1,68 @@
+@import '@/styles/mixins';
+@import '@/styles/variables';
+
+
+
+.itemWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.cardImage {
+	min-width: 40%;
+	margin: 0 auto;
+}
+.cardInfo {
+}
+.title {
+	width: 80%;
+	@include interBold(36px, $second-color);
+}
+.price {
+	@include interRegular(24px, $second-color);
+	margin-top: 20px;
+}
+.btnBlock {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 70%;
+	gap: 20px;
+	padding: 20px 0;
+	button {
+		border: none;
+		padding: 10px;
+		@include interRegular(16px, $second-color);
+		cursor: pointer;
+		&:hover {
+			background-color: rgb(104, 255, 104);
+		}
+	}
+}
+.itemCounter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	justify-content: space-between;
+}
+.oneClick {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	input {
+		height: 30px;
+		outline: none;
+		border: 1px solid #a2ff5f;
+	}
+}
+.techParameters {
+	p {
+		@include interBold(24px, $second-color);
+	}
+	li {
+		margin-top: 20px;
+		@include interLight(18px, $second-color);
+	}
+}
