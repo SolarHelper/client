@@ -45,10 +45,33 @@
     padding: 20px;
     z-index: 1;
   }
+  a {
+    padding: 20px 0;
+    position: relative;
+  }
+  a::after {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $gold;
+    transition: width 0.2s ease-in-out;
+  }
+  @media (hover: hover) {
+    a:hover::after {
+      width: 100%;
+    }
+  }
+  a:focus::after {
+    width: 100%;
+  }
 }
 
 .profile {
-  @include row-flex(40px, flex, row);
+  @include row-flex(20px, flex, row);
   @include flex-position(center, space-between);
 }
 
@@ -56,18 +79,20 @@
   @include flex-position(center);
 
   @include row-flex(12px, flex, row);
-
-  @include dynamic-size-svg(43px, 40px, 24px, 20px);
 }
 
 .logo,
 .menuBurger {
   @include dynamic-size-svg(43px, 40px, 24px, 20px);
+  @include hover-scale;
 }
 
 .cart {
-  @include dynamic-size-svg(40px, 34px, 23px, 20px);
+  @include dynamic-size-svg(35px, 30px, 23px, 20px);
 }
 .user {
-  @include dynamic-size-svg(23px, 30px, 20px, 20px);
+  @include dynamic-size-svg(20px, 27px, 20px, 20px);
+}
+.user svg {
+  @include hover-scale;
 }

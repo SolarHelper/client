@@ -3,20 +3,22 @@ import Image from "next/image";
 import cardProduct from "/public/cardImage/cardProduct1.png";
 import RatingForm from "@/shared/ui/RatingForm/RatingForm";
 import Counter from "@/shared/ui/Counter/Counter";
-import Button from "@/shared/ui/Buttons/Button";
-import BasketSvg from "@/shared/ui/svg/BasketSvg";
+import Button from "@/shared/ui/Button/Button";
+import Basket from "/public/icon/basket.svg";
+import { useState } from "react";
 
 interface CardProductProps {
   productName: string;
   productPrice: number;
   productRaiting: number;
-  NumberOfProducts: number;
 }
 
 const CardProduct = (props: CardProductProps) => {
-  const { productName, productPrice, productRaiting, NumberOfProducts } = {
+  const { productName, productPrice, productRaiting } = {
     ...props,
   };
+  //число товара для покупки
+  const [numberOfProducts, setNumberOfProducts] = useState(0);
   return (
     <section className={style.container}>
       <Image
@@ -33,14 +35,20 @@ const CardProduct = (props: CardProductProps) => {
       </div>
       <div className={style.btnContainer}>
         <Counter
-          value={value}
-          decrement={decrement}
-          increment={increment}
-          NumberOfProducts={NumberOfProducts}
+          defaulPlaceholder="0"
+          //убавить ед. товара
+          decrement={() => setNumberOfProducts(numberOfProducts - 1)}
+          //добавить ед. товара
+          increment={() => setNumberOfProducts(numberOfProducts + 1)}
+          //кол-во товара
+          numberOfProducts={numberOfProducts}
         />
-        <Button>
+        <Button
+          // отправить(купить) товар
+          onclick={() => console.log(numberOfProducts)}
+        >
           в корзину
-          <BasketSvg />
+          <Basket />
         </Button>
       </div>
     </section>

@@ -6,14 +6,13 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { MouseEvent, MouseEventHandler } from "react";
 
 interface CounterProps {
-  NumberOfProducts: number;
+  numberOfProducts: number;
   defaulPlaceholder: string;
   decrement: () => void;
   increment: () => void;
-  value: number;
 }
 const Counter = (props: CounterProps) => {
-  const { NumberOfProducts, defaulPlaceholder, value, decrement, increment } = {
+  const { numberOfProducts, defaulPlaceholder, decrement, increment } = {
     ...props,
   };
   return (
@@ -25,7 +24,7 @@ const Counter = (props: CounterProps) => {
         className={`${style.input} subtitle12`}
         placeholder={defaulPlaceholder}
         type="number"
-        defaultValue={value}
+        value={numberOfProducts}
       />
       <button className={style.btn} onClick={increment}>
         <Arrow className={style.rightArrow} />

@@ -24,6 +24,15 @@
   }
 }
 
+@mixin hover-scale($x-scale: 1.1, $y-scale: 1.1) {
+  transition: transform 0.2s;
+  @media (hover: hover) {
+    &:hover {
+      transform: scale($x-scale, $y-scale);
+    }
+  }
+}
+
 //изменение прозрачности (по умолчанию, наведение, нажатие)
 @mixin dynamic-opacity($default: 1, $hover: 0.8, $active: 0.7) {
   opacity: $default;
