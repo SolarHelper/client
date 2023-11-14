@@ -27,13 +27,11 @@ export type TitleProps = {
 	title: string;
 	productClass?: number | string;
 };
-
 export interface ServiceProps {
 	title: string;
 	paragraph: string;
 	image: string;
 }
-
 export interface SpecialistProps {
 	title: string;
 	paragraph: string;

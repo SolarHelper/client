@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Card.module.scss';
 import Link from 'next/link';
-import RatingStar from '../../../../UI/RatingStar/RatingStar';
-import Button from '../../../../UI/BuyButton/Button';
-import ArrowButton from '../../../../UI/ArrowButton/ArrowButton';
+import RatingStar from '@/UI/RatingStar/RatingStar';
+import Button from '@/UI/Button/Button';
+import ArrowButton from '@/UI/ArrowButton/ArrowButton';
 import Image from 'next/image';
 import { PropsCard } from '@/types';
 

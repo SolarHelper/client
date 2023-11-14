@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@import '@/styles/variables';
+@import '@/styles/mixins';
 
 .wrapper {
 	width: 100%;
@@ -8,14 +8,12 @@
 	align-items: center;
 	margin: 50px 0 70px 0;
 }
-
 .serviceTitle {
 	width: 80%;
 	text-align: center;
 	font-size: 24px;
 	margin: 0 0 50px 0;
 }
-
 .serviceItems {
 	width: 100%;
 	display: flex;
@@ -23,18 +21,15 @@
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
-
 .image {
 	margin-bottom: 20px;
 }
-
 .serviceItemWrapper {
 	width: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-
 .serviceItem {
 	width: 50%;
 	margin-bottom: 60px;
@@ -43,13 +38,11 @@
 	align-items: center;
 	justify-content: center;
 }
-
 .paragraphFirst {
 	text-align: center;
 	margin-top: 10px;
 	font-size: 18px;
 }
-
 .paragraphSecond {
 	@include interLight(18px);
 	text-align: center;
@@ -61,46 +54,42 @@
 	.serviceItems {
 		width: 50%;
 	}
-
 	.serviceItemWrapper {
 		width: 100%;
 	}
-
 	.serviceTitle {
 		width: 500px;
 		font-size: 24px;
 		margin: 0 0 50px 0;
 	}
 }
+
 @media (max-width: 544px) {
 	.serviceTitle {
 		width: 320px;
 		font-size: 18px;
 		margin: 0 0 20px 0;
 	}
-
 	.paragraphFirst {
 		@include interLight(14px);
 		margin-top: 10px;
 	}
-
 	.paragraphSecond {
 		@include interLight(14px);
 		margin-top: 10px;
 	}
 }
+
 @media (max-width: 340px) {
 	.serviceTitle {
 		@include interBold(14px);
 		width: 320px;
 		margin: 0 0 20px 0;
 	}
-
 	.paragraphFirst {
 		@include interRegular(12px);
 		margin-top: 10px;
 	}
-
 	.paragraphSecond {
 		@include interRegular(12px);
 		margin-top: 10px;

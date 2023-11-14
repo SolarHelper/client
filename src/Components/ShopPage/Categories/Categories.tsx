@@ -1,8 +1,17 @@
 import React from 'react';
-import RangePrice from '../../../UI/RangePrice/RangePrice';
 import classes from './Categories.module.scss';
 
-const Categories = ({ visible, handleButton, filterValue }) => {
+type CategoriesProps = {
+	visible: boolean;
+	handleButton: () => void;
+	filterValue: string;
+};
+
+const Categories = ({
+	visible,
+	handleButton,
+	filterValue,
+}: CategoriesProps) => {
 	return (
 		<div className={classes.wrapper}>
 			<div className={visible ? classes.visible : classes.notVisible}>
@@ -15,7 +24,22 @@ const Categories = ({ visible, handleButton, filterValue }) => {
 						Инверторы
 					</button>
 				</div>
-				<RangePrice title={'Цена'} />
+				<div className={classes.rangePrice}>
+					<p className={classes.rangePriceParagraph}>Цена</p>
+					<div>
+						<input
+							className={classes.slider}
+							type='range'
+							id='price'
+							name='price'
+							min='0'
+							max={100}
+						/>
+						<p>
+							<span className={classes.rangeSpan}>от 0 до 100 грн</span>
+						</p>
+					</div>
+				</div>
 				{/* Чекбокс фильтрации по номинальной мощности */}
 				<p className={classes.categories}>Мощность Вт.</p>
 			</div>

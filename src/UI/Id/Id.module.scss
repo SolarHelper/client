@@ -1,8 +1,6 @@
 @import '@/styles/mixins';
 @import '@/styles/variables';
 
-
-
 .itemWrapper {
 	width: 100%;
 	display: flex;
@@ -12,11 +10,9 @@
 	min-width: 40%;
 	margin: 0 auto;
 }
-.cardInfo {
-}
 .title {
-	width: 80%;
 	@include interBold(36px, $second-color);
+	width: 80%;
 }
 .price {
 	@include interRegular(24px, $second-color);
@@ -32,9 +28,9 @@
 	gap: 20px;
 	padding: 20px 0;
 	button {
+		@include interRegular(16px, $second-color);
 		border: none;
 		padding: 10px;
-		@include interRegular(16px, $second-color);
 		cursor: pointer;
 		&:hover {
 			background-color: rgb(104, 255, 104);
@@ -62,7 +58,7 @@
 		@include interBold(24px, $second-color);
 	}
 	li {
-		margin-top: 20px;
 		@include interLight(18px, $second-color);
+		margin-top: 20px;
 	}
 }

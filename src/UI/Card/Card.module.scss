@@ -36,7 +36,6 @@
 .itemPriceCount {
 	@include interBold(18px, $second-color);
 }
-
 .btnBlock {
 	width: 100%;
 	display: flex;
@@ -77,6 +76,7 @@
 		height: 180px;
 	}
 }
+
 @media (max-width: 768px) {
 	.item {
 		width: 50%;
@@ -90,6 +90,7 @@
 		height: 200px;
 	}
 }
+
 @media (max-width: 500px) {
 	.item {
 		gap: 5px;

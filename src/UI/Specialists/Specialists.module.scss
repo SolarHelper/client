@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@import '@/styles/variables';
+@import '@/styles/mixins';
 
 .wrapper {
 	width: 100%;
@@ -11,27 +11,22 @@
 	justify-content: space-evenly;
 	box-sizing: border-box;
 }
-
 .title {
   @include interBold(24px, $main-color);
 	text-align: center;
 }
-
 .textWrapper {
 	display: flex;
 	width: 100%;
 	justify-content: space-evenly;
 }
-
 .text {
 	width: 20%;
 	text-align: center;
 }
-
 .paragraphFirst {
 	@include interBold(32px, $main-color);
 }
-
 .paragraphSecond {
 	@include interRegular(18px, $main-color);
 }
@@ -53,26 +48,21 @@
 		width: 320px;
 		height: 171px;
 	}
-
 	.title {
 		@include interBold(14px, $main-color);
 	}
-
 	.textWrapper {
 		flex-direction: column;
 		width: 60%;
 		margin: 0 auto;
 	}
-
 	.text {
 		display: flex;
 	}
-
 	.paragraphFirst {
 		@include interBold(14px, $main-color);
 		width: 50px;
 	}
-
 	.paragraphSecond {
 		@include interRegular(12px, $main-color);
 		text-wrap: nowrap;
