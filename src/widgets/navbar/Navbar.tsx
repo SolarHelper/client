@@ -4,7 +4,6 @@ import Sun from "/public/icon/sun.svg";
 import UserIcon from "/public/icon/userIcon.svg";
 import MenuBurger from "/public/icon/menuBurger.svg";
 import Cart from "@/shared/ui/Cart/Cart";
-import { useState } from "react";
 const links = [
   { href: "/pages/hardware", name: "Оборудование" },
   { href: "/pages/installers", name: "Инсталляторы" },

@@ -19,6 +19,19 @@ const CardProduct = (props: CardProductProps) => {
   };
   //число товара для покупки
   const [numberOfProducts, setNumberOfProducts] = useState(0);
+
+  const onchange = (e) => {
+    (e) => setNumberOfProducts(e.target.value);
+  };
+  const decrement = () => {
+    setNumberOfProducts(numberOfProducts - 1);
+  };
+  const increment = () => {
+    setNumberOfProducts(numberOfProducts + 1);
+  };
+  const onclick = () => {
+    console.log(numberOfProducts);
+  };
   return (
     <section className={style.container}>
       <Image
@@ -35,17 +48,18 @@ const CardProduct = (props: CardProductProps) => {
       </div>
       <div className={style.btnContainer}>
         <Counter
+          onchange={onchange}
           defaulPlaceholder="0"
           //убавить ед. товара
-          decrement={() => setNumberOfProducts(numberOfProducts - 1)}
+          decrement={decrement}
           //добавить ед. товара
-          increment={() => setNumberOfProducts(numberOfProducts + 1)}
+          increment={increment}
           //кол-во товара
           numberOfProducts={numberOfProducts}
         />
         <Button
           // отправить(купить) товар
-          onclick={() => console.log(numberOfProducts)}
+          onclick={onclick}
         >
           в корзину
           <Basket />

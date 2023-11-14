@@ -1,18 +1,16 @@
 "use client";
 import style from "@/shared/ui/counter/Counter.module.scss";
 import Arrow from "/public/icon/ArrowLeft.svg";
-import { increment, decrement } from "@/store/slice/counterSlice/counterSlice";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import { MouseEvent, MouseEventHandler } from "react";
+import { InputHTMLAttributes } from "react";
 
 interface CounterProps {
   numberOfProducts: number;
-  defaulPlaceholder: string;
   decrement: () => void;
   increment: () => void;
+  onchange: (e: InputHTMLAttributes<HTMLSelectElement>) => void;
 }
 const Counter = (props: CounterProps) => {
-  const { numberOfProducts, defaulPlaceholder, decrement, increment } = {
+  const { numberOfProducts, decrement, increment, onchange } = {
     ...props,
   };
   return (
@@ -20,12 +18,7 @@ const Counter = (props: CounterProps) => {
       <button className={style.btn} onClick={decrement}>
         <Arrow />
       </button>
-      <input
-        className={`${style.input} subtitle12`}
-        placeholder={defaulPlaceholder}
-        type="number"
-        value={numberOfProducts}
-      />
+      <span className={`${style.input} subtitle12`}>{numberOfProducts}</span>
       <button className={style.btn} onClick={increment}>
         <Arrow className={style.rightArrow} />
       </button>
