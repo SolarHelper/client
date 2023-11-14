@@ -1,0 +1,31 @@
+@import "../../app/styles/colors";
+@import "../../app/styles/mixins";
+@import "../../app/styles/variables";
+
+.wrapper {
+  width: 100vw;
+  background-color: $dark;
+}
+
+.container {
+  @include dynamic-padding(20px, 20px, 20px, 20px);
+
+  @include row-flex(50px);
+  @include flex-position(center, center);
+
+  min-height: 120px;
+  color: $light;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  flex-wrap: wrap;
+  span,
+  a {
+    @include row-flex(10px);
+    @include flex-position(center, center);
+    @include dynamic-size-svg(15px, 15px, 13px, 13px);
+  }
+  .link {
+    border-bottom: 1px dashed $light;
+  }
+}

@@ -1,0 +1,17 @@
+@import "@/app/styles/mixins.scss";
+@import "@/app/styles/colors.scss";
+
+.container {
+  position: relative;
+  @include hover-scale;
+}
+.count {
+  position: absolute;
+  @include dynamic-background;
+  @include border(15px, 0px);
+  @include size(14px, 14px, 10px, 10px);
+  @include font-settings(8px, 6px, 1, 800);
+  @include flex-position(center, center);
+  top: 0;
+  right: 0;
+}
