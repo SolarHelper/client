@@ -1,7 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './Button.module.scss';
-import { ButtonProps } from '@/types';
+
+type ButtonProps = {
+	children: string;
+	width?: number;
+	height?: number;
+	src?: string;
+	image?: string;
+	propsClass: string;
+};
 
 const Button = ({
 	children,
