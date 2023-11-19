@@ -1,27 +1,24 @@
 import React from 'react';
 import classes from './Card.module.scss';
 import Link from 'next/link';
-import RatingStar from '@/UI/RatingStar/RatingStar';
 import Button from '@/UI/Button/Button';
 import ArrowButton from '@/UI/ArrowButton/ArrowButton';
 import Image from 'next/image';
-import { PropsCard } from '@/types';
 
-const Card = ({ item }: PropsCard) => {
+const Card = () => {
 	return (
 		<>
 			{/* Карточка товара */}
 			<div className={classes.item}>
-				{/* Линк, переход в карточку товара */}
-				<Link className={classes.cardLink} href={`/shop/${item.id}`}>
+				{/* Линк, переход в карточку товара подставить {id}*/}
+				<Link className={classes.cardLink} href={`/shop/id`}>
 					{/* Изображение товара */}
-
 					<Image
 						width={140}
 						height={187}
 						alt='Изображение карточки товара'
 						className={classes.cardImage}
-						src={item.photo}
+						src='/svg/solar-panel.svg'
 						style={{
 							width: '60%',
 							height: '187px',
@@ -30,9 +27,13 @@ const Card = ({ item }: PropsCard) => {
 				</Link>
 				{/* Блок: Название товара, Цена, Рейтинг */}
 				<div className={classes.cardBlock}>
-					<p className={classes.itemName}>{item.model}</p>
-					<p className={classes.itemPriceCount}>{item.price} грн</p>
-					<RatingStar />
+					<p className={classes.itemName}>lorem ipsum</p>
+					<p className={classes.itemPriceCount}>price грн</p>
+					<div className={classes.ratingWrapper}>
+						<div className={classes.ratingStars}>
+							<span>⭐⭐⭐⭐</span>
+						</div>
+					</div>
 				</div>
 				<div className={classes.btnBlock}>
 					{/* Блок Счетчика товаров */}

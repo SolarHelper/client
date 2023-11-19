@@ -3,26 +3,16 @@ import classes from './Categories.module.scss';
 
 type CategoriesProps = {
 	visible: boolean;
-	handleButton: () => void;
-	filterValue: string;
 };
 
-const Categories = ({
-	visible,
-	handleButton,
-	filterValue,
-}: CategoriesProps) => {
+const Categories = ({ visible }: CategoriesProps) => {
 	return (
 		<div className={classes.wrapper}>
 			<div className={visible ? classes.visible : classes.notVisible}>
 				<div className={classes.buttonBlock}>
 					<p className={classes.categories}>Категории</p>
-					<button onClick={handleButton} className={classes.btn}>
-						Солнечные панели
-					</button>
-					<button onClick={handleButton} className={classes.btn}>
-						Инверторы
-					</button>
+					<button className={classes.btn}>Солнечные панели</button>
+					<button className={classes.btn}>Инверторы</button>
 				</div>
 				<div className={classes.rangePrice}>
 					<p className={classes.rangePriceParagraph}>Цена</p>
@@ -40,7 +30,6 @@ const Categories = ({
 						</p>
 					</div>
 				</div>
-				{/* Чекбокс фильтрации по номинальной мощности */}
 				<p className={classes.categories}>Мощность Вт.</p>
 			</div>
 		</div>

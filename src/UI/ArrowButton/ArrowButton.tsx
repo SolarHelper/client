@@ -1,7 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './ArrowButton.module.scss';
-import { ArrowProps } from '@/types';
+
+type ArrowProps = {
+	direction: string;
+};
 
 const ArrowButton = ({ direction }: ArrowProps) => {
 	return (

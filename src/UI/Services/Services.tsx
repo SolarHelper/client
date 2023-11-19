@@ -1,9 +1,13 @@
 import React from 'react';
 import classes from './Services.module.scss';
 import Image from 'next/image';
-import { ServiceProps } from '@/types';
+interface ServiceProps {
+	title: string;
+	paragraph: string;
+	image: string;
+}
 
-const Services = ({ infoPanel }: { infoPanel: Array<ServiceProps> }) => {
+const Services = ({ infoPanel }: { infoPanel: ServiceProps[] }) => {
 	return (
 		<div className={classes.wrapper}>
 			<h2 className={classes.serviceTitle}></h2>
@@ -20,7 +24,6 @@ const Services = ({ infoPanel }: { infoPanel: Array<ServiceProps> }) => {
 								src={item.image}
 								alt=''
 							/>
-
 							<p className={classes.paragraphFirst}>
 								{item.title.toUpperCase()}
 							</p>

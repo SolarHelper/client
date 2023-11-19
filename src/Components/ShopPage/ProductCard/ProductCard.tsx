@@ -1,18 +1,55 @@
-'use client';
 import React from 'react';
-import { data } from '@/assets/constants/shopPage';
 import classes from './ProductCard.module.scss';
-import Id from '@/UI/Id/Id';
+import Image from 'next/image';
 
-const ProductCard = ( {id} ) => {
-  console.log(id);
-	const items = data.filter((x) => x.id === Number(id));
+type propsId = {
+	id: string | string[];
+};
 
+const ProductCard = ({ id }: propsId) => {
 	return (
+		// Карточка товара
 		<div className={classes.wrapper}>
-			{items.map((item, index) => (
-				<Id item={item} index={index} />
-			))}
+			<div className={classes.itemWrapper}>
+				<div className={classes.cardImage}>
+					<Image src={'/svg/solar-panel.svg'} width={360} height={400} alt='' />
+				</div>
+				<div className={classes.cardInfo}>
+					<h3 className={classes.title}>тип + модель</h3>
+					<p className={classes.price}>Цена: 1200 ₴</p>
+					<div className={classes.btnBlock}>
+						<div className={classes.itemCounter}>
+							<button>-</button>1<button>+</button>
+							<button>КУПИТЬ</button>
+						</div>
+						<div className={classes.oneClick}>
+							<input
+								type='tel'
+								name='phone'
+								placeholder='+380931111111'
+								pattern=''
+							/>
+							<button>ЗАКАЗАТЬ В 1 КЛИК</button>
+						</div>
+					</div>
+					<div className={classes.techParameters}>
+						<p>Характеристики :</p>
+						<hr />
+						<li>Бренд: </li>
+						<li>Тип: </li>
+						<li>Номинальная мощность, Вт: </li>
+						<li>Номинальный ток, А: </li>
+						<li>КПД: </li>
+						<li>Клас защиты IP: </li>
+						<li>Количество фотоэлементов в модуле, шт:</li>
+						<li>Высота, мм: </li>
+						<li>Ширина, мм:</li>
+						<li>Глубина, мм: </li>
+						<li>Вес, кг: </li>
+						<li>Страна производитель: </li>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

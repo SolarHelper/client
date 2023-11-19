@@ -36,6 +36,24 @@
 .itemPriceCount {
 	@include interBold(18px, $second-color);
 }
+.ratingWrapper {
+	display: flex;
+	width: 70%;
+	min-width: 100px;
+	border-radius: 8px;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+}
+.ratingStars {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.star {
+	margin: 7px 5px;
+}
 .btnBlock {
 	width: 100%;
 	display: flex;
@@ -84,7 +102,9 @@
 		min-width: 40%;
 		gap: 10px;
 	}
-
+	.ratingWrapper {
+		width: 80%;
+	}
 	.cardImage {
 		width: 50%;
 		height: 200px;
@@ -105,6 +125,9 @@
 	.cardImage {
 		width: 50%;
 		height: 130px;
+	}
+	.ratingWrapper {
+		width: 100%;
 	}
 	.itemName {
 		@include interRegular(12px, $second-color);

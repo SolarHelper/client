@@ -12,7 +12,7 @@
 	box-sizing: border-box;
 }
 .title {
-  @include interBold(24px, $main-color);
+	@include interBold(24px, $main-color);
 	text-align: center;
 }
 .textWrapper {

@@ -1,11 +1,14 @@
 import React from 'react';
 import classes from './Specialists.module.scss';
-import { SpecialistProps } from '@/types';
+type SpecialistProps = {
+	title: string;
+	paragraph: string;
+};
 
 const Specialists = ({
 	infoSpecialist,
 }: {
-	infoSpecialist: Array<SpecialistProps>;
+	infoSpecialist: SpecialistProps[];
 }) => {
 	return (
 		<div className={classes.wrapper}>

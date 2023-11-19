@@ -32,11 +32,42 @@
 	justify-content: center;
 	margin-bottom: 20px;
 }
-
+.sortBy {
+	display: flex;
+	align-items: center;
+	span {
+		margin-right: 10px;
+	}
+	.filterProduct {
+		padding: 10px 5px;
+		border-radius: 5px;
+	}
+}
 .products {
 	width: 70%;
 	display: flex;
 	flex-direction: column;
+}
+.searchWrapper {
+	position: relative;
+	width: 100%;
+	border: 1px solid $second-color;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+.searchInput {
+	@include interRegular(14px, $second-color);
+	padding-left: 40px;
+	opacity: 0.6;
+	width: 100%;
+	outline: none;
+	height: 50px;
+	border: none;
+}
+.searchImage {
+	position: absolute;
+	top: 15px;
+	right: 40px;
 }
 .cards {
 	display: flex;
@@ -83,8 +114,27 @@
 }
 
 @media (max-width: 768px) {
+	.headerImage {
+		width: 100%;
+
+		.title {
+			padding-left: 50px;
+			@include interRegular(24px, $main-color);
+		}
+	}
 	.products {
 		width: 100%;
+	}
+	.searchWrapper {
+		width: 90%;
+	}
+	.searchInput {
+		height: 30px;
+		display: flex;
+	}
+	.searchImage {
+		top: 7px;
+		right: 40px;
 	}
 	.buttonBlock {
 		display: flex;
