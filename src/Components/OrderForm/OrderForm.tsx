@@ -31,13 +31,11 @@ const OrderForm: React.FC = () => {
   });
   const [country, setCountry] = useState<string>('');
   const [region, setRegion] = useState<string>('');
-  
 
   const getErrorMessage = (fieldName: string) => {
     const fieldErrors = errors[fieldName as keyof Inputs];
     return fieldErrors ? <p>{fieldErrors.message || 'Error'}</p> : null;
   };
-
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log({ ...data, country, region });
@@ -52,14 +50,12 @@ const OrderForm: React.FC = () => {
             className={styles.form__wrapper__input}
             type="text"
             placeholder="Ф.И.О."
-            {...register('nameUser', 
-            {required: 'Поле обязательно к заполнению!',
-            minLength: { value: 4, message: 'Минимум 4 символа' },
+            {...register('nameUser', {
+              required: 'Поле обязательно к заполнению!',
+              minLength: { value: 4, message: 'Минимум 4 символа' },
             })}
           />
-          <div className={styles.error}>
-            {getErrorMessage('nameUser')}
-          </div>
+          <div className={styles.error}>{getErrorMessage('nameUser')}</div>
         </div>
         <div className={styles.form__wrapper}>
           <Controller
@@ -68,7 +64,7 @@ const OrderForm: React.FC = () => {
             rules={{ required: true }}
             render={({ field, fieldState }) => (
               <MuiTelInput
-                className={styles.muiTelInput}
+                className={styles.MuiTelInput}
                 {...field}
                 defaultCountry="RU"
                 onlyCountries={['RU', 'UA', 'BY']}
@@ -83,17 +79,15 @@ const OrderForm: React.FC = () => {
             className={styles.form__wrapper__input}
             type="email"
             placeholder="E-mail"
-            {...register('email', 
-            {required: 'Ввведите свой e-mail',
+            {...register('email', {
+              required: 'Ввведите свой e-mail',
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 message: 'Неверный формат адреса',
               },
             })}
           />
-          <div className={styles.error}>
-            {getErrorMessage('email')}
-          </div>
+          <div className={styles.error}>{getErrorMessage('email')}</div>
         </div>
         <div className={styles.form__wrapper}>
           <Controller
@@ -136,27 +130,19 @@ const OrderForm: React.FC = () => {
               />
             )}
           />
-          <div className={styles.error}>
-            {getErrorMessage('region')}
-          </div>
+          <div className={styles.error}>{getErrorMessage('region')}</div>
         </div>
         <div className={styles.form__wrapper}>
           <CustomInput
             className={styles.form__wrapper__input}
             type="text"
             placeholder="Номер склада"
-            {...register('code', 
-            { required: 'Укажите номер склада' })}
+            {...register('code', { required: 'Укажите номер склада' })}
           />
-          <div className={styles.error}>
-            {getErrorMessage('code')}
-          </div>
+          <div className={styles.error}>{getErrorMessage('code')}</div>
         </div>
-        <textarea 
-        {...register('text')} 
-        placeholder="Комментарий">
-        </textarea>
-        <button type="submit" className={`button ${styles.form__button}`}>
+        <textarea {...register('text')} placeholder="Комментарий"></textarea>
+        <button type="submit" className={`btn ${styles.form__button}`}>
           Оформить заказ
         </button>
       </div>

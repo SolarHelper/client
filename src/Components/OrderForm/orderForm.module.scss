@@ -1,11 +1,13 @@
 .form {
   margin-top: 50px;
+  padding: 0 0 30px 0;
   .container {
-    width: 1110px;
+    width: 1140px;
     margin: 0 auto;
+    padding: 0 20px;
   }
   &__title {
-    color: #1B1F29;
+    color: #1b1f29;
     text-align: left;
     font-size: 18px;
     font-style: normal;
@@ -20,8 +22,8 @@
       height: 40px;
       padding: 0 30px 0 30px;
       border-radius: 15px;
-      border: 2px solid #1B1F29;
-      color: #1B1F29;
+      border: 2px solid #1b1f29 !important;
+      color: #1b1f29;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -31,8 +33,8 @@
       width: 100%;
       height: 40px;
       border-radius: 15px;
-      border: 2px solid #1B1F29;
-      color: #1B1F29;
+      border: 2px solid #1b1f29;
+      color: #1b1f29;
       padding: 0 30px 0 30px;
     }
   }
@@ -47,7 +49,7 @@
     line-height: normal;
     resize: none;
     border-radius: 15px;
-    border: 2px solid #1B1F29;
+    border: 2px solid #1b1f29;
   }
   &__button {
     margin-top: 22px;
@@ -60,13 +62,13 @@
     align-items: center;
     border-radius: 15px;
     border: none;
-    background: #FCB222;
+    background: #fcb222;
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
     &:hover {
       opacity: 0.8;
-      background:  #FCB222;
+      background: #fcb222;
     }
   }
 }
@@ -78,27 +80,30 @@
     font-size: 14px;
     &:before {
       display: inline;
-      content: "⚠ ";
+      content: '⚠ ';
     }
   }
 }
 
-.muiTelInput {
+.MuiTelInput {
   width: 100%;
   height: 50px;
   padding: 0;
-  color: #1B1F29;
+  color: #1b1f29;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  p{
+  &-Menu {
+    margin-left: 20px !important;
+  }
+  p {
     height: 10px;
     color: red;
     font-size: 14px;
     &:before {
       display: inline;
-      content: "⚠ ";
+      content: '⚠ ';
     }
   }
   input {
@@ -108,20 +113,17 @@
   }
   fieldset {
     border-radius: 15px;
-    border: 2px solid  #1B1F29;
+    border: 2px solid #1b1f29;
   }
 }
-
 
 @media (max-width: 1200px) {
   .form {
     .container {
       width: 960px;
-      padding: 0 20px;
     }
   }
 }
-
 
 @media (max-width: 992px) {
   .form {
@@ -142,7 +144,7 @@
 @media (max-width: 576px) {
   .form {
     .container {
-      width: 320px;
+      width: 300px;
       padding: 0;
     }
     &__title {
@@ -154,7 +156,3 @@
     }
   }
 }
-
-
-
-

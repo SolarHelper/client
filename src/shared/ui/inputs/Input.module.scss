@@ -1,0 +1,28 @@
+@import "../../../app/styles/mixins.scss";
+@import "../../../app/styles/colors.scss";
+
+.container {
+  @include column-flex(6px);
+}
+.label {
+}
+.inputContainer {
+  @include border();
+
+  @include row-flex();
+
+  @include dynamic-border;
+
+  @include flex-position(center, center);
+  transition: opacity 0.2s;
+  opacity: 0.85;
+
+  align-items: center;
+  padding-right: 14px;
+}
+.input {
+  @include border(15px, 0px);
+  @include dynamic-padding(14px, 14px, 10px, 10px);
+  width: 100%;
+  outline: none;
+}

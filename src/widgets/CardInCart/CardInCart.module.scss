@@ -1,0 +1,42 @@
+@import '../../app/styles/mixins.scss';
+.container {
+  @include border;
+
+  @include row-flex(10px);
+
+  @include flex-position;
+
+  @include dynamic-padding(20px, 20px, 10px, 10px);
+
+  @include size(460px, 160px, 300px, 100px);
+
+  .img {
+    @include dynamic-size-img(60px, 80px);
+  }
+}
+.wrapper {
+  width: 100%;
+
+  @include row-flex(10px);
+
+  @include flex-position;
+}
+
+.infoContainer {
+  @include column-flex(20px);
+
+  @include flex-position(left, space-between);
+}
+
+.imgContainer {
+  @include row-flex();
+
+  @include flex-position;
+
+  @include dynamic-size-svg(18px, 18px, 14px, 14px);
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}

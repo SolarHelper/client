@@ -1,5 +1,4 @@
 'use client';
-
 import { useGetProductByNameQuery } from '@/store/slice/api';
 import { UserData } from '@/app/types';
 

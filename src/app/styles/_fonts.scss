@@ -1,0 +1,36 @@
+@import "../styles/_mixins.scss";
+.title32 {
+  // "@include font-settings (размер шрифта при обычеый, при ширине < 678, line-height, font-weight)
+  @include font-settings(32px, 18px, 1, 800);
+}
+.title24 {
+  @include font-settings(24px, 14px, 1, 800);
+}
+.subtitle24 {
+  @include font-settings(24px, 14px, 1, 400);
+}
+.title18 {
+  @include font-settings(18px, 12px, 1, 800);
+}
+.subtitle18 {
+  @include font-settings(18px, 12px, 1, 400);
+}
+.body18 {
+  @include font-settings(18px, 12px, 1, 300);
+}
+.title12 {
+  @include font-settings(12px, 10px, 1, 800);
+}
+.subtitle12 {
+  @include font-settings(12px, 10px, 1, 400);
+}
+
+// Thin 100
+// ExtraLight 200
+// Light 300
+// Regular 400
+// Medium 500
+// SemiBold 600
+// Bold 700
+// ExtraBold 800
+// Black 900

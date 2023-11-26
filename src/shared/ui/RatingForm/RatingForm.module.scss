@@ -1,0 +1,20 @@
+@import "../../../app/styles/colors.scss";
+@import "../../../app/styles/mixins.scss";
+.rating {
+  padding: 0 10px;
+
+  @include size(140px, 30px, 100px, 20px);
+
+  @include row-flex(10px, inline-flex, row-reverse);
+
+  @include flex-position(center, center);
+
+  @include border(8px, 1px);
+
+  @include dynamic-size-svg(16px, 16px, 12px, 12px);
+
+  @include dynamic-color-svg;
+  svg {
+    cursor: pointer;
+  }
+}
