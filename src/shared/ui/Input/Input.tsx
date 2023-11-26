@@ -1,6 +1,7 @@
-"use client";
-import style from "@/shared/ui/Input/Input.module.scss";
-import { ChangeEvent } from "react";
+'use client';
+import style from '@/shared/ui/Input/Input.module.scss';
+import clsx from 'clsx';
+import { ChangeEvent } from 'react';
 
 interface InputProps {
   placeholder: string;
@@ -8,14 +9,15 @@ interface InputProps {
   children?: string | React.ReactNode;
   onchange: (e: ChangeEvent) => void;
   value: string;
+  customClassName?: string;
 }
 
 const Input = (props: InputProps) => {
-  const { placeholder, label, children, onchange, value } = {
+  const { placeholder, label, children, onchange, value, customClassName } = {
     ...props,
   };
   return (
-    <div className={style.container}>
+    <div className={clsx(style.container, customClassName)}>
       {label && (
         <label className="title18" htmlFor={label}>
           {label}

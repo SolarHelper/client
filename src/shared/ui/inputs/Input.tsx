@@ -1,7 +1,7 @@
-"use client";
-import style from "@/shared/ui/Inputs/Input.module.scss";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import { inputValue } from "@/store/slice/inputSlice/inputSlice";
+'use client';
+import style from '@/shared/ui/Inputs/Input.module.scss';
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
+import { inputValue } from '@/store/slice/inputSlice/inputSlice';
 
 interface InputProps {
   placeholder: string;

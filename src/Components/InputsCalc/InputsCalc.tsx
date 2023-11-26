@@ -1,8 +1,9 @@
 'use client';
-
 import React from 'react';
 import makeAnimated from 'react-select/animated';
 import dynamic from 'next/dynamic';
+import Button from '@/shared/ui/Button/Button';
+import Input from '@/shared/ui/Input/Input';
 
 import styles from './inputsCalc.module.scss';
 import './reactSelect.scss';
@@ -28,10 +29,17 @@ const InputsCalc: React.FC = () => {
         <div className={styles.calc__wrapper}>
           <div className={styles.calc__energy}>
             <h3 className={styles.calc__title}>Общее количество энергии</h3>
-            <div className={styles.calc__energy__wrapper}>
+            {/* <div className={styles.calc__energy__wrapper}>
               <input className={styles.energyInput} type="text" placeholder="34" />
               <span className={styles.spantext}>кВт/сут</span>
-            </div>
+            </div> */}
+            <Input
+              customClassName={styles.energyInput}
+              value={''}
+              placeholder="34"
+              onchange={() => {}}>
+              кВт/&nbsp;сут
+            </Input>
           </div>
           <div className={styles.calc__equipment}>
             <h3 className={styles.calc__title}>Производитель</h3>
@@ -46,7 +54,9 @@ const InputsCalc: React.FC = () => {
             />
           </div>
         </div>
-        <button className={styles.calc__btn}>Расчитать</button>
+        <Button customBtnClass={styles.calc__btn} onclick={() => {}}>
+          Расчитать
+        </Button>
       </div>
     </section>
   );
