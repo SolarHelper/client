@@ -1,11 +1,13 @@
 import CardCalc from '@/Components/CardCalc/CardCalc';
 import InputsCalc from '@/Components/InputsCalc/InputsCalc';
 
-export default function Calculator() {
+const Calculator = () => {
   return (
     <>
       <InputsCalc />
       <CardCalc />
     </>
   );
-}
+};
+
+export default Calculator;

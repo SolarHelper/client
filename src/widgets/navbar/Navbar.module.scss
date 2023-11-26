@@ -1,0 +1,98 @@
+@import "../../app/styles/mixins.scss";
+@import "../../app/styles/colors.scss";
+@import "../../app/styles/variables.scss";
+.container {
+  @include row-flex;
+  @include dynamic-padding(0, 20px, 0, 20px);
+
+  max-width: var(--max-width);
+  margin: 0 auto;
+  @include flex-position(center, space-between);
+  @include size(100%, 80px, 100%, 60px);
+}
+.navbar {
+  @include row-flex(40px, flex, row);
+
+  @include flex-position(center, space-between);
+  position: relative;
+  button {
+    cursor: pointer;
+    display: none;
+    border: none;
+    background-color: transparent;
+  }
+  @media (max-width: $mobile-width) {
+    button {
+      display: block;
+    }
+  }
+}
+
+.pages {
+  @include row-flex(40px, flex, row);
+  @include flex-position(center, space-between);
+
+  @media (max-width: $mobile-width) {
+    @include column-flex(20px);
+    @include flex-position(center, space-between);
+    @include border(15px, 1px);
+
+    width: 200px;
+    background-color: $light;
+    position: absolute;
+    top: 130%;
+    right: 0;
+    padding: 20px;
+    z-index: 1;
+  }
+  a {
+    padding: 20px 0;
+    position: relative;
+  }
+  a::after {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $gold;
+    transition: width 0.2s ease-in-out;
+  }
+  @media (hover: hover) {
+    a:hover::after {
+      width: 100%;
+    }
+  }
+  a:focus::after {
+    width: 100%;
+  }
+}
+
+.profile {
+  @include row-flex(20px, flex, row);
+  @include flex-position(center, space-between);
+}
+
+.logo {
+  @include flex-position(center);
+
+  @include row-flex(12px, flex, row);
+}
+
+.logo,
+.menuBurger {
+  @include dynamic-size-svg(43px, 40px, 24px, 20px);
+  @include hover-scale;
+}
+
+.cart {
+  @include dynamic-size-svg(35px, 30px, 23px, 20px);
+}
+.user {
+  @include dynamic-size-svg(20px, 27px, 20px, 20px);
+}
+.user svg {
+  @include hover-scale;
+}
