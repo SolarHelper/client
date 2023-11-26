@@ -1,0 +1,30 @@
+@import "/src/app/styles/mixins.scss";
+@import "/src/app/styles/variables.scss";
+.container {
+  @include column-flex(20px);
+
+  @include flex-position;
+
+  @include border(15px, 1px);
+
+  @include dynamic-padding(20px, 20px, 10px, 10px);
+}
+.img {
+  @include dynamic-size-img(60px, 80px);
+}
+.infoContainer {
+  @include column-flex(10px);
+
+  @include flex-position;
+  div {
+    text-align: center;
+  }
+}
+.btnContainer {
+  @include row-flex(20px);
+
+  @include flex-position(center, center);
+  @media (max-width: $tablet-width) {
+    @include column-flex(20px);
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../app/styles/_mixins.scss";
+
+.btn {
+  @include size(140px, 40px, 120px, 34px);
+
+  @include border(15px, 0);
+
+  @include dynamic-background;
+
+  @include row-flex(14px);
+
+  @include flex-position(center, center);
+
+  @include font-settings(12px, 10px, 1, 800);
+
+  @include dynamic-size-svg(14px, 14px, 12px, 12px);
+
+  padding: 10px 20px;
+  cursor: pointer;
+}
