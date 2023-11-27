@@ -11,14 +11,15 @@ const ArrowButton = ({ direction }: ArrowProps) => {
 		<button className={classes.arrow}>
 			{direction === 'right' ? (
 				<Image
-					src='/svg/arrowRight.svg'
+					src='/svg/arrow.svg'
 					alt='количество товаров'
 					width={9}
 					height={10}
+          style={{ transform:'rotate(-180deg)'}}
 				/>
 			) : (
 				<Image
-					src='/svg/arrowLeft.svg'
+					src='/svg/arrow.svg'
 					alt='количество товаров'
 					width={9}
 					height={10}

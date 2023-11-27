@@ -12,16 +12,16 @@ const Specialists = ({
 }) => {
 	return (
 		<div className={classes.wrapper}>
-			<h1 className={classes.title}>Большой выбор специалистов</h1>
+			<h2 className={classes.title}>Большой выбор специалистов</h2>
 
-			<div className={classes.textWrapper}>
+			<div className={classes.specialists}>
 				{infoSpecialist.map((item, index) => (
 					<div className={classes.text} key={`${item}${index}`}>
-						<div className={classes.divFirst}>
-							<p className={classes.paragraphFirst}>{item.title}</p>
+						<div className={classes.companies}>
+							<h3 className={classes.titleSecond}>{item.title}</h3>
 						</div>
-						<div className={classes.divSecond}>
-							<p className={classes.paragraphSecond}>{item.paragraph}</p>
+						<div className={classes.projects}>
+							<p className={classes.paragraph}>{item.paragraph}</p>
 						</div>
 					</div>
 				))}

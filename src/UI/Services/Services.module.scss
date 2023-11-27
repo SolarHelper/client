@@ -8,7 +8,7 @@
 	align-items: center;
 	margin: 50px 0 70px 0;
 }
-.serviceTitle {
+.title {
 	width: 80%;
 	text-align: center;
 	font-size: 24px;
@@ -38,12 +38,12 @@
 	align-items: center;
 	justify-content: center;
 }
-.paragraphFirst {
+.secondTitle {
 	text-align: center;
 	margin-top: 10px;
 	font-size: 18px;
 }
-.paragraphSecond {
+.paragraph {
 	@include interLight(18px);
 	text-align: center;
 	margin-top: 10px;
@@ -57,7 +57,7 @@
 	.serviceItemWrapper {
 		width: 100%;
 	}
-	.serviceTitle {
+	.title {
 		width: 500px;
 		font-size: 24px;
 		margin: 0 0 50px 0;
@@ -65,32 +65,32 @@
 }
 
 @media (max-width: 544px) {
-	.serviceTitle {
+	.title {
 		width: 320px;
 		font-size: 18px;
 		margin: 0 0 20px 0;
 	}
-	.paragraphFirst {
+	.secondTitle {
 		@include interLight(14px);
 		margin-top: 10px;
 	}
-	.paragraphSecond {
+	.paragraph {
 		@include interLight(14px);
 		margin-top: 10px;
 	}
 }
 
 @media (max-width: 340px) {
-	.serviceTitle {
+	.title {
 		@include interBold(14px);
 		width: 320px;
 		margin: 0 0 20px 0;
 	}
-	.paragraphFirst {
+	.secondTitle {
 		@include interRegular(12px);
 		margin-top: 10px;
 	}
-	.paragraphSecond {
+	.paragraph {
 		@include interRegular(12px);
 		margin-top: 10px;
 	}

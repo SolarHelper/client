@@ -5,11 +5,12 @@ import classes from './Shop.module.scss';
 import Card from '@/Components/ShopPage/Card/Card';
 import Button from '@/UI/Button/Button';
 import Categories from '@/Components/ShopPage/Categories/Categories';
+import Select from '@/UI/Select/Select';
 
 const Shop = () => {
-	const [visible, setVisible] = useState<boolean>(false);
+	const [toggleVisible, setToogleVisible] = useState<boolean>(false);
 	const buttonHandler = (): void => {
-		setVisible((prev) => !prev);
+		setToogleVisible((prev) => !prev);
 	};
 	return (
 		<div className={classes.wrapper}>
@@ -18,7 +19,7 @@ const Shop = () => {
 				<h1 className={classes.title}>Наши продукты</h1>
 			</div>
 			<div className={classes.mainWrapper}>
-				<Categories visible={visible} />
+				<Categories isVisible={toggleVisible} />
 				<div className={classes.products}>
 					{/* Поиск по товару */}
 					<div className={classes.searchWrapper}>
@@ -48,12 +49,7 @@ const Shop = () => {
 						</div>
 						<div className={classes.sortBy}>
 							<span>Сортировка:</span>
-							<select className={classes.filterProduct} name='select'>
-								<option value='value2'>От дешевых к дорогим </option>
-								<option value='value3'>От дорогих к дешевым</option>
-								<option value='value1'>По рейтингу</option>
-								<option value='value1'>Новинки</option>
-							</select>
+							<Select />
 						</div>
 					</div>
 					<div className={classes.cards}>

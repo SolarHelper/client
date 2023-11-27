@@ -4,7 +4,6 @@
 .item {
 	@include flexColumn;
 	@include interRegular(18px, $second-color);
-	min-width: 32.87%;
 	width: 32.87%;
 	align-items: center;
 	justify-content: center;
@@ -81,7 +80,7 @@
 		min-height: 370px;
 	}
 	.products {
-		min-width: 100%;
+		width: 100%;
 	}
 	.itemName {
 		@include interRegular(14px, $second-color);

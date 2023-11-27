@@ -15,7 +15,7 @@
 	@include interBold(24px, $main-color);
 	text-align: center;
 }
-.textWrapper {
+.specialists {
 	display: flex;
 	width: 100%;
 	justify-content: space-evenly;
@@ -24,10 +24,10 @@
 	width: 20%;
 	text-align: center;
 }
-.paragraphFirst {
+.titleSecond {
 	@include interBold(32px, $main-color);
 }
-.paragraphSecond {
+.paragraph {
 	@include interRegular(18px, $main-color);
 }
 
@@ -51,7 +51,7 @@
 	.title {
 		@include interBold(14px, $main-color);
 	}
-	.textWrapper {
+	.specialists {
 		flex-direction: column;
 		width: 60%;
 		margin: 0 auto;
@@ -59,11 +59,11 @@
 	.text {
 		display: flex;
 	}
-	.paragraphFirst {
+	.titleSecond {
 		@include interBold(14px, $main-color);
 		width: 50px;
 	}
-	.paragraphSecond {
+	.paragraph {
 		@include interRegular(12px, $main-color);
 		text-wrap: nowrap;
 	}

@@ -45,8 +45,6 @@ const Card = () => {
 					{/* Кнопка покупки товара */}
 					<Button
 						propsClass='btn'
-						width={15}
-						height={16}
 						image='/svg/shopCartIcon.svg'
 					>
 						В корзину

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import classes from './Button.module.scss';
 
-type ButtonProps = {
+interface ButtonProps {
 	children: string;
 	width?: number;
 	height?: number;
@@ -13,8 +13,6 @@ type ButtonProps = {
 
 const Button = ({
 	children,
-	width,
-	height,
 	image,
 	propsClass,
 }: ButtonProps) => {
@@ -24,9 +22,9 @@ const Button = ({
 			<Image
 				className={classes.image}
 				src={image}
-				width={width}
-				height={height}
 				alt='Изображение'
+        width={9}
+        height={10}
 			/>
 		</button>
 	);

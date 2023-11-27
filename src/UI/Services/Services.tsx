@@ -10,7 +10,7 @@ interface ServiceProps {
 const Services = ({ infoPanel }: { infoPanel: ServiceProps[] }) => {
 	return (
 		<div className={classes.wrapper}>
-			<h2 className={classes.serviceTitle}></h2>
+			<h2 className={classes.title}></h2>
 
 			<div className={classes.serviceItems}>
 				{infoPanel.map((item, index) => (
@@ -24,10 +24,10 @@ const Services = ({ infoPanel }: { infoPanel: ServiceProps[] }) => {
 								src={item.image}
 								alt=''
 							/>
-							<p className={classes.paragraphFirst}>
+							<h3 className={classes.secondTitle}>
 								{item.title.toUpperCase()}
-							</p>
-							<p className={classes.paragraphSecond}>{item.paragraph}</p>
+							</h3>
+							<p className={classes.paragraph}>{item.paragraph}</p>
 						</div>
 					</div>
 				))}

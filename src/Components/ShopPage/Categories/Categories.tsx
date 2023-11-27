@@ -2,13 +2,13 @@ import React from 'react';
 import classes from './Categories.module.scss';
 
 type CategoriesProps = {
-	visible: boolean;
+	isVisible: boolean;
 };
 
-const Categories = ({ visible }: CategoriesProps) => {
+const Categories = ({ isVisible }: CategoriesProps) => {
 	return (
 		<div className={classes.wrapper}>
-			<div className={visible ? classes.visible : classes.notVisible}>
+			<div className={isVisible ? classes.isVisible : classes.notVisible}>
 				<div className={classes.buttonBlock}>
 					<p className={classes.categories}>Категории</p>
 					<button className={classes.btn}>Солнечные панели</button>

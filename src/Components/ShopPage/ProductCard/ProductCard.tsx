@@ -2,11 +2,7 @@ import React from 'react';
 import classes from './ProductCard.module.scss';
 import Image from 'next/image';
 
-type propsId = {
-	id: string | string[];
-};
-
-const ProductCard = ({ id }: propsId) => {
+const ProductCard = () => {
 	return (
 		// Карточка товара
 		<div className={classes.wrapper}>
