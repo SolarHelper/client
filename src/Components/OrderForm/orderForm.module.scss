@@ -94,8 +94,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  &-Menu {
-    margin-left: 20px !important;
+  button  {
+    margin:  0 20px !important;
+    
   }
   p {
     height: 10px;
@@ -116,6 +117,7 @@
     border: 2px solid #1b1f29;
   }
 }
+
 
 @media (max-width: 1200px) {
   .form {

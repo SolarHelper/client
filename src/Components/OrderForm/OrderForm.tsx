@@ -5,6 +5,7 @@ import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { MuiTelInput } from 'mui-tel-input';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 import CustomInput from '@/UI/CustomInput/CustomInput';
+import Input from '@/shared/ui/Input/Input';
 
 import styles from './orderForm.module.scss';
 
@@ -46,7 +47,7 @@ const OrderForm: React.FC = () => {
       <div className={styles.container}>
         <h2 className={styles.form__title}>Оплата и доставка</h2>
         <div className={styles.form__wrapper}>
-          <CustomInput
+          <Input
             className={styles.form__wrapper__input}
             type="text"
             placeholder="Ф.И.О."

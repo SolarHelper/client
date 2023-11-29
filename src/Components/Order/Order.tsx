@@ -14,25 +14,33 @@ const Order: React.FC = () => {
         <div className={styles.order__grid}>
           <CardInCart
             containerClassName={styles.cartochka}
+            title18Classname={styles.title18}
+            subtitle18Classname={styles.subtitle18}
             productName="AAA"
             productPrice={12000}
             NumberOfProducts={123}
           />
           <CardInCart
             containerClassName={styles.cartochka}
-            productName="ААА"
+            title18Classname={styles.title18}
+            subtitle18Classname={styles.subtitle18}
+            productName="AAA"
             productPrice={12000}
             NumberOfProducts={123}
           />
           <CardInCart
             containerClassName={styles.cartochka}
-            productName="ААА"
+            title18Classname={styles.title18}
+            subtitle18Classname={styles.subtitle18}
+            productName="AAA"
             productPrice={12000}
             NumberOfProducts={123}
           />
           <CardInCart
             containerClassName={styles.cartochka}
-            productName="ААА"
+            title18Classname={styles.title18}
+            subtitle18Classname={styles.subtitle18}
+            productName="AAA"
             productPrice={12000}
             NumberOfProducts={123}
           />

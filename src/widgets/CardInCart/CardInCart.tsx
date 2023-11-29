@@ -10,6 +10,8 @@ interface CardInCartProps {
   productPrice: number;
   NumberOfProducts: number;
   containerClassName?: string;
+  title18Classname?: string;
+  subtitle18Classname?: string;
 }
 
 const CardInCart = ({
@@ -17,14 +19,16 @@ const CardInCart = ({
   productPrice,
   NumberOfProducts,
   containerClassName,
+  title18Classname,
+  subtitle18Classname,
 }: CardInCartProps) => {
   return (
     <div className={clsx(style.container, containerClassName)}>
       <Image className={style.img} src={cardProduct} alt="product" width={88} height={120} />
       <div className={style.wrapper}>
         <div className={style.infoContainer}>
-          <span className="title18">{productPrice}р</span>
-          <span className="subtitle18">{productName}</span>
+          <span className={clsx('title18', title18Classname )}>{productPrice}р</span>
+          <span className={clsx('subtitle18', subtitle18Classname)}>{productName}</span>
           <Counter NumberOfProducts={NumberOfProducts} />
         </div>
         <div className={style.imgContainer}>
