@@ -60,6 +60,10 @@
     }
     .cartochka {
       @include size(330px, 100px, 330px, 100px);
+      img {
+        width: 60px;
+        height: 80px;
+      }
     }
   }
 }
@@ -76,6 +80,10 @@
     }
     .cartochka {
       @include size(500px, 140px, 500px, 140px);
+      img {
+        width: 88px;
+        height: 120px;
+      }
     }
   }
 }
@@ -93,6 +101,10 @@
     }
     .cartochka {
       @include size(300px, 100px, 300px, 100px);
+      img {
+        width: 60px;
+        height: 80px;
+      }
     }
     &__button {
       margin-right: 0;
