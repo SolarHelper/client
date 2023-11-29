@@ -19,8 +19,7 @@ export default function ThankYouForPurchase() {
           Вы успешно оформили заказ. Мы свяжемся с вами в ближайшее время.
         </h3>
         <h3 className={styles.thanks__titleOrder}>Номер вашего заказа №3471</h3>
-        <Link className={styles.thanks__link} href="#">
-          {/* <button className={styles.thanks__btn}>Вернуться в магазин</button> */}
+        <Link className={styles.thanks__link} href="/">
           <Button onclick={() => {}}>Вернуться в магазин</Button>
         </Link>
         <h3 className={styles.thanks__notification}>
