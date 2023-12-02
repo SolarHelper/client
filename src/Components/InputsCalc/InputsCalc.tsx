@@ -29,10 +29,6 @@ const InputsCalc: React.FC = () => {
         <div className={styles.calc__wrapper}>
           <div className={styles.calc__energy}>
             <h3 className={styles.calc__title}>Общее количество энергии</h3>
-            {/* <div className={styles.calc__energy__wrapper}>
-              <input className={styles.energyInput} type="text" placeholder="34" />
-              <span className={styles.spantext}>кВт/сут</span>
-            </div> */}
             <Input
               customClassName={styles.energyInput}
               value={''}

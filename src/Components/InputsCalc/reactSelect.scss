@@ -13,6 +13,9 @@
       box-shadow: $gold-hover !important;
       border-color: $gold-hover !important;
     }
+    &:active {
+      box-shadow: none !important;
+    }
   }
   &__value-container {
     height: 35px !important;

@@ -4,6 +4,7 @@ import CardInCart from '@/widgets/CardInCart/CardInCart';
 import Button from '@/shared/ui/Button/Button';
 
 import styles from './cardcalc.module.scss';
+import Link from 'next/link';
 
 const CardCalc: React.FC = () => {
   return (
@@ -36,9 +37,11 @@ const CardCalc: React.FC = () => {
             NumberOfProducts={123}
           />
         </div>
-        <Button customBtnClass={styles.order__button} onclick={() => {}}>
-          В корзину
-        </Button>
+        <Link href="/pages/cart">
+          <Button customBtnClass={styles.order__button} onclick={() => {}}>
+            В корзину
+          </Button>
+        </Link>
       </div>
     </section>
   );
