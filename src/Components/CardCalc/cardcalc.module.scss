@@ -1,0 +1,113 @@
+@import '../../app/styles/mixins';
+.order {
+  padding-bottom: 50px;
+  h2 {
+    margin-top: 50px;
+    margin-left: 20px;
+    color: #1b1f29;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+  }
+  &__grid {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 160px;
+    grid-auto-rows: 160px;
+    gap: 20px;
+  }
+  .cartochka {
+    @include size(540px, 160px, 540px, 160px);
+  }
+  &__button {
+    margin-left: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .order {
+    .container {
+      width: 960px;
+    }
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .cartochka {
+      @include size(450px, 160px, 450px, 160px);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .order {
+    .container {
+      width: 720px;
+    }
+    &__grid {
+      grid-template-rows: 100px;
+      grid-auto-rows: 100px;
+    }
+    .cartochka {
+      @include size(330px, 100px, 330px, 100px);
+      img {
+        width: 60px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .order {
+    .container {
+      width: 540px;
+    }
+    &__grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 140px;
+      grid-auto-rows: 140px;
+    }
+    .cartochka {
+      @include size(500px, 140px, 500px, 140px);
+      img {
+        width: 88px;
+        height: 120px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .order {
+    .container {
+      width: 320px;
+      padding: 0 10px;
+    }
+    &__grid {
+      padding: 0;
+      grid-template-rows: 100px;
+      grid-auto-rows: 100px;
+    }
+    .cartochka {
+      @include size(300px, 100px, 300px, 100px);
+      img {
+        width: 60px;
+        height: 80px;
+      }
+    }
+    &__button {
+      margin-right: 0;
+    }
+  }
+}
