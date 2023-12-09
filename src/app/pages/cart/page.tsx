@@ -1,5 +1,11 @@
-const Cart = () => {
-  return <div>Cart</div>;
-};
+import Order from '@/Components/Order/Order';
+import OrderForm from '@/Components/OrderForm/OrderForm';
 
-export default Cart;
+export default function Cart() {
+  return (
+    <div>
+      <Order />
+      <OrderForm />
+    </div>
+  );
+}

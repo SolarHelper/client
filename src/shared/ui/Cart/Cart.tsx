@@ -1,5 +1,5 @@
-import styles from "@/shared/ui/Cart/Cart.module.scss";
-import CartIcon from "/public/icon/cart.svg";
+import styles from '@/shared/ui/Cart/Cart.module.scss';
+import CartIcon from '/public/icon/cart.svg';
 
 interface CartProps {
   numberProducts: number;
